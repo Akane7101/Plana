@@ -2055,9 +2055,6 @@ Typed *surrender* to surrender and admited defeat`
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
 
-        const randomEmoji = manyemojis[Math.floor(Math.random() * manyemojis.length)];
-        A17.sendMessage(from, { react: { text: randomEmoji, key: m.key } });
-
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, ChatGPT!`);
 
         try {
@@ -2069,7 +2066,7 @@ Typed *surrender* to surrender and admited defeat`
           let message = "";
 
           if (response1.status === 200 && responseData1 && responseData1.status === true && responseData1.data) {
-            message = responseData1.data;
+            message = responseData1.data.result.reply;
           } else {
             return reply("Sorry, I couldn't fetch a response from the API at the moment.");
           }
