@@ -22,6 +22,8 @@ global.prefa = ["."];//Default prefix here. you can change if you want.
 //
 global.Owner = ["249904077717", "249121914174", "249121484160"];//If you want singal number so global.Owner = ['916297175943'] Change into your number.
 global.tawfik = ["212607497765"];
+global.jiga = ["249993220365"];
+global.maz = ["917207587091"];
 global.sae = ["967773074637"];
 global.mm = ["201005231576"];
 global.alnoor = ["249119673008"];
@@ -59,7 +61,7 @@ global.ownertag = ["249904077717"];
 global.OwnerName = "akane710";
 global.BotName = "plana";
 global.packname = "plana";                             //Do not change.
-global.author = "حسن زلقو";      
+global.author = "akane710";      
 global.BotSourceCode = "https://github.com/Kai0071/A17"; //Do not change.
 global.SupportGroupLink = "https://chat.whatsapp.com/KJKxoW0FmOeLLv7etC6e5Y";
 
