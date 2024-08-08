@@ -1827,12 +1827,10 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
     if (smallinput.includes('249122331430')) {
-	 const imageUrls = [
-        'بل', 
-         'حصل', 
-                ]; 
-      const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)]; 
-	     reply(imageUrls)
+	 const tt = ['بل', 
+		     'حصل'];
+    const gg = tt[Math.floor(Math.random() * tt.length)];
+    reply (gg) 
 	  const imageUrlss = [
         'https://graph.org/file/5248292ead497cfce8374.png', 
          'https://graph.org/file/494e2b5405235be158b21.png', 
