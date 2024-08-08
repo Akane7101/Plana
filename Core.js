@@ -1472,6 +1472,19 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
     }
     }
 
+   if (smallinput.includes('ريتني')){
+	let dd = 'https://chat.whatsapp.com/KiuFlqe0NIdKWTWI9VFFvY';
+   let response = await A17.groupInviteCode(m.chat);
+  let link = (`https://chat.whatsapp.com/${response}`);
+    if (dd === link) {
+      const stick = await getBuffer(`https://graph.org/file/6489cd2cb3e3d434de611.png`)
+      const webpBuffer = await sharp(stick)
+         .webp() 
+         .toBuffer();
+       // Send sticker usng A17 libray (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m }); 
+	   }
+	  }
 	    
 
     if (smallinput.includes('زعاط') || smallinput.includes('سسسم') || smallinput.includes('عرص')) {
