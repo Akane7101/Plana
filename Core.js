@@ -1823,7 +1823,30 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    if (tagg) {
 	 reply(`ناصل عشان العتلة دي مستنياك يا زولي`) 
   }
-	    } 
+	    }
+
+
+    if (smallinput.includes('249122331430')) {
+	 const imageUrls = [
+        'بل', 
+         'حصل', 
+                ]; 
+      const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)]; 
+	     reply(imageUrls)
+	  const imageUrlss = [
+        'https://graph.org/file/5248292ead497cfce8374.png', 
+         'https://graph.org/file/494e2b5405235be158b21.png', 
+	  'https://graph.org/file/2fcbb8e70c440b5f8830c.png', 
+         'https://graph.org/file/6a5ae297c817b7c05af26.png', 
+                ]; 
+      const randomImageUrll = imageUrlss[Math.floor(Math.random() * imageUrlss.length)];
+	  let media = await getBuffer(randomImageUrll);
+        const webpBuffer = await sharp(media)
+         .webp() 
+         .toBuffer();
+       // Send sticker usng A17 libray (replace with your actual function)
+       A17.sendMessage(from, { sticker: webpBuffer })
+	 }
 
 
     if (smallinput.includes('اركب') || smallinput.includes('ابلع') || smallinput.includes('يا مرا')) {
