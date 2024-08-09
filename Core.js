@@ -1131,7 +1131,7 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 
 
      if (smallinput.includes('بلانا بقيني ادمن') || smallinput.includes('بلانا اديني ادمن')) {
-	if (!creator) return reply (`انت عب ولا شنو`)
+	if (!isCreator) return reply (`مافي ليك😝😝`)
 	if (!isBotAdmins) return reply (`انا زاتي ما ادمن يا زولي`) 
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
         let users = m.sender 
