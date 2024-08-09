@@ -253,6 +253,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const isIssammm = [...global.issammm].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
     const itsMe = m.sender == botNumber ? true : false 
     const tagg = (m.mentionedJid.includes(botNumber) || (m.quoted && m.quoted.sender === botNumber)) ? botNumber : null;
+    const braa = (m.mentionedJid.includes('249904077717') || (m.quoted && m.quoted.sender === '249904077717@s.whatsapp.net')) ? '249904077717@s.whatsapp.net' : null;
     const text = args.join(" ")
     const from = m.chat
     const quoted = m.quoted ? m.quoted : m
@@ -1163,7 +1164,11 @@ A17.sendMessage(from, { image: resizedImage, caption: `plana loves you too ${pus
 	 reply (`يطلع فيك زبي`)
 	let users = m.sender
 	await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
-	} else {
+	} else if (braa) {
+	   reply (`يطلع فيك الظوبر`)
+	let users = m.sender
+	await A17.groupParticipantsUpdate(m.chat, [users], 'remove') 
+	}else{
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
         if (isAdmins && isCreator) return reply('تم') 
@@ -4918,6 +4923,7 @@ break;
 	const random = typ[Math.floor(Math.random() * typ.length)];
 	if (tagg && !isAbd) return reply (`شنو يااا زولي معقولة لكن`) 
 	if (tagg && isAbd) return reply (random) 
+	if (braa) return reply(`معقولة يا زولي بالغت والله..بعد الخوة و العشرة دي كلها داير تطردني`)
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
