@@ -1747,7 +1747,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
 
     if (smallinput.includes('lmj')) {
-    A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=https://i.postimg.cc/CM34YRFb/photo-2021-02-05-10-13-39.jpg&package=LoL&author=Human` } });
+    A17.sendMessage(from, { text:  botNumber });
     } 
 
 
@@ -4814,7 +4814,6 @@ break;
 
 
       case 'promote': case 'admin': {
-	if (!IsPlana){
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -4823,7 +4822,6 @@ break;
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
         await A17.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-      }
 	     }
         break;
 
