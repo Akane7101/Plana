@@ -1071,7 +1071,8 @@ Typed *surrender* to surrender and admited defeat`
            reply('Error generating and relaying message.');
     }
 }
-    } 
+    }
+   break;
 
 
 	
@@ -3465,12 +3466,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
         case 'gg119': 
-       if (!isCreator) return reply(mess.botowner)
         var user = m.sender
         var cara = 'cara'
         const give1 = eco.give(user, cara, 5000000)
         reply(`*You got 💎5000000*`)
         break; 
+		    
 
 	case 'kkk': { 
           let link = text;
