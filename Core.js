@@ -1020,7 +1020,6 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('بلانا عزي الشباب')) {
     const media = await getBuffer(`https://graph.org/file/3d609590885473d7080b2.jpg`)
     if (isCreator) {
-	    try {
 	   let msg = generateWAMessageFromContent(m.key.remoteJid, {
 	     viewOnceMessage: {
               message: {
@@ -1048,8 +1047,9 @@ Typed *surrender* to surrender and admited defeat`
                       {
                         "name": "quick_reply",
                         "buttonParamsJson": `{"display_text":"get","id":"${prefix}gg119"}`
-                      },
-			    ]
+                      }, 
+			    
+                    ]
                   })
                 })
               }
@@ -1066,13 +1066,8 @@ Typed *surrender* to surrender and admited defeat`
           await A17.relayMessage(msg.key.remoteJid, msg.message, {
             messageId: msg.key.id
           });
-        } catch (error) {
-          console.error('Error generating and relaying message:', error);
-           reply('Error generating and relaying message.');
-    }
 }
     }
-   break;
 
 
 	
