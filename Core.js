@@ -3410,60 +3410,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         reply(`*You got 💎5000000*`)
 	}
         break; 
-
-
-	case 'عزي':  
-	const media = await getBuffer(`https://graph.org/file/3d609590885473d7080b2.jpg`)
-    if (isCreator) {
-	   let msg = generateWAMessageFromContent(m.key.remoteJid, {
-	     viewOnceMessage: {
-              message: {
-                "messageContextInfo": {
-                  "deviceListMetadata": {},
-                  "deviceListMetadataVersion": 2
-                },
-                interactiveMessage: proto.Message.InteractiveMessage.create({
-                  body: proto.Message.InteractiveMessage.Body.create({
-                    text: `ميريا`
-                  }),
-                  footer: proto.Message.InteractiveMessage.Footer.create({
-                    text: "افتحوا الشغل"
-                  }),
-                  header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: media }, { upload: A17.waUploadToServer })),
-
-
-                    title: "خمسة مليون",
-                    subtitle: "Browse through the available commands",
-                    hasMediaAttachment: false
-                  }),
-                  nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-                    buttons: [
-                      {
-                        "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"get","id":"${prefix}gg119"}`
-                      }, 
-			    
-                    ]
-                  })
-                })
-              }
-		}
-          }, {});
-
-
-          if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
-            const errorMessage = 'Error: Invalid message key.';
-            console.error(errorMessage);
-            return reply(errorMessage);
-          }
-
-          await A17.relayMessage(msg.key.remoteJid, msg.message, {
-            messageId: msg.key.id
-          });
-}
-    }
-	  break;
 		    
 
 	case 'kkk': { 
