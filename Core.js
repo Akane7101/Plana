@@ -3403,11 +3403,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
-        case 'gg119': 
+        case 'gg119':{ 
         var user = m.sender
         var cara = 'cara'
         const give1 = eco.give(user, cara, 5000000)
         reply(`*You got 💎5000000*`)
+	}
         break; 
 
 
