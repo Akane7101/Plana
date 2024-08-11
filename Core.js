@@ -705,7 +705,7 @@ let media = await A17.downloadAndSaveMediaMessage
 
 
     //don't edit this part.
-    const formatTime = (seconds) => {
+  /*  const formatTime = (seconds) => {
       const hours = Math.floor(seconds / 3600);
       const minutes = Math.floor((seconds % 3600) / 60);
       const secs = seconds % 60;
@@ -732,7 +732,7 @@ let media = await A17.downloadAndSaveMediaMessage
     // Initial call to start the random status updates
     updateStatus();
 
-
+     */ 
 
     //-----------------------------------------------------------------------------------------------------------------------------------//
 
