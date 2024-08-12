@@ -1063,16 +1063,12 @@ A17.sendMessage(from, { sticker : sticker }, { quoted: m });
      if (smallinput.includes('ggh')) {
     let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
 const webpBuffer = await sharp(media)
-  .resize(null, null, {
-    fit: 'contain', // Ensure the image fits within the original aspect ratio
-    background: { r: 0, g: 0, b: 0, alpha: 0 } // Transparent background
-  })
-  .webp({ quality: 80 }) // Adjust quality as needed
+   .background({ r: 0, g: 0, b: 0, alpha: 0 }) // Add transparent background
+  .webp() 
   .toBuffer();
 
-// Send sticker using A17 library
-A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
-     }
+// Send sticker using A17 library 
+A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
