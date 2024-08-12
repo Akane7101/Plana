@@ -3184,8 +3184,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
             case '3':
               if (k > balance.wallet) return reply(`You need to pay 💎10000 to increase bank capacity ~ 100000 sp`);
               const deduct3 = await eco.deduct(user, cara, 10000);
-              const add3 = eco.giveCapacity(user, cara, 250000);
-              await reply(`250000 💎diamond storage has been added in ${pushname} bank`)
+              const add3 = eco.giveCapacity(user, cara, 2500000);
+              await reply(`2500000 💎diamond storage has been added in ${pushname} bank`)
           }
         }
         break;
@@ -3209,6 +3209,17 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
+	case 'detuct':{ 
+	const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
+        const cara = "cara";
+        const user1 = m.sender;
+        const user2 = target;
+	const jj = text 
+        await eco.deduct(user2, cara, jj); 
+	reply(`تمت الشفشفة بنجاح`) 
+	}
+		    
+
       case 'withdraw': case 'withdrawal': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -3227,6 +3238,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
       }
         break;
+
+
 
 
       case 'rob':
@@ -3270,7 +3283,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
             reply(`You got 💎${w}`);
          }
     }  else {
-        const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
+       const target = m.quoted && m.mentionedJid.length === 0 ? m.quoted.sender : m.mentionedJid[0] || null;
         const cara = "cara";
         const user1 = m.sender;
         const user2 = target;
