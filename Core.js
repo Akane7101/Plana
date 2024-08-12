@@ -3245,9 +3245,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         const b = 10000;
         const balance1 = await eco.balance(user1, cara);
         const balance2 = await eco.balance(user2, cara);
-	const me = 249904077717
-	const mee = me + '@s.whatsapp.net'
-        const k = balance1.wallet * 0.25
+	const k = balance1.wallet * 0.25
         const w = balance2.wallet * 0.25
 
         const typ = ['ran', 'rob', 'caught'];
@@ -3263,13 +3261,11 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         } else if (random === 'caught') {
             await eco.deduct(user1, cara, k);
             await eco.give(user2, cara, k);
-	    await eco.give(mee, cara, k);
             reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
             reply(`You lost 💎${k}`);
         } else if (random === 'rob') {
             await eco.deduct(user2, cara, w);
             await eco.give(user1, cara, w);
-	    await eco.give(mee, cara, w);
             reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
             reply(`You got 💎${w}`);
          }
@@ -3282,8 +3278,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         const b = 10000;
         const balance1 = await eco.balance(user1, cara);
         const balance2 = await eco.balance(user2, cara);
-	const me = 249904077717
-	const mee = me + '@s.whatsapp.net'
         const k = balance1.wallet * 0.25
         const w = balance2.wallet * 0.25
 
@@ -3299,14 +3293,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
             await reply("زولك دا هرب اعمل رايح");
         } else if (random === 'caught') {
             await eco.deduct(user1, cara, k);
-	    await eco.give(mee, cara, k); 
-            await eco.give(user2, cara, k);
+	    await eco.give(user2, cara, k);
             reply("ماشي وين يا عب تعال هنا قبضوك بالثابتة");
             reply(`You lost 💎${k}`);
         } else if (random === 'rob') {
             await eco.deduct(user2, cara, w);
             await eco.give(user1, cara, w);
-	    await eco.give(mee, cara, w);
             reply("حرامي خسيس..شيلها ان شاء الله تنفعك");
             reply(`You got 💎${w}`);
          }
