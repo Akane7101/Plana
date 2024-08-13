@@ -12828,6 +12828,9 @@ const imageUrrls = [
         const ba = await axios.get(`https://api.ennead.cc/buruaka/character/${encodeURIComponent(q)}`)
         reply(mess.waiting);
         const aru = ba.data;
+	const name = aru.character.name
+	const ggh = await axios.get(`https://api.neoxr.eu/api/video?q=${name} memorial lobby&apikey=mcandy`) 
+	const l2d = ggh.data.data.url
         let arutxt = `
 🎀 *Name: ${aru.character.name}*
 🌟 *rarity: ${aru.character.rarity}
@@ -12847,6 +12850,7 @@ const imageUrrls = [
 ➿ *voiceactor: ${aru.info.voiceActor}*
 `;
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
+       await A17.sendMessage(m.chat, { video: l2d, caption: `L2D` }, { quoted: m })
      }
         break;
 
