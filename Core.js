@@ -14474,8 +14474,6 @@ last login: ${aru.lastLogin}
           if (isBan) return reply(mess.banned);
           if (isBanChat) return reply(mess.bangc);
           A17.sendMessage(from, { react: { text: "✨", key: m.key } })
-
-          reply(`الحاصل`)
         }
 
         break;
