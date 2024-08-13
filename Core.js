@@ -1817,6 +1817,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     A17.sendMessage(from, { image : hh }, { quoted: m });
     await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
       } 
+	}
 
 
     if (smallinput.includes('كسم')) {
