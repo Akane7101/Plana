@@ -1810,6 +1810,15 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
  }  
 
 
+	if (smallinput.includes('بالوعة') || smallinput.includes('بالوعه')) {
+      if(tagg && isBotAdmins) {
+    let userToKick = m.sender;
+    const hh = await getBuffer(`https://graph.org/file/97d3b3fd9fdd9faf1c2d3.jpg`) 
+    A17.sendMessage(from, { image : hh }, { quoted: m });
+    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+      } 
+
+
     if (smallinput.includes('كسم')) {
    if (isMob) return reply(`موب كلامك كتير و شراميطك حبة`);
    if (tagg) {
