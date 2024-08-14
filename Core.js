@@ -1789,6 +1789,22 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
      reply(random)
     A17.sendMessage(from, { sticker: safi });
         }
+
+
+    if (smallinput.endsWith('كيف') || smallinput === 'كيف' ) {
+    let dd = 'https://chat.whatsapp.com/KiuFlqe0NIdKWTWI9VFFvY';
+    let ddd = 'https://chat.whatsapp.com/KiqD2AAPL3fCIUfJCGps4j';
+   let response = await A17.groupInviteCode(m.chat);
+   let link = (`https://chat.whatsapp.com/${response}`);
+    if (dd === link || ddd === link) {
+    const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
+    const typ = ['زي جعبتك في الصيف', ];
+    const random = typ[Math.floor(Math.random() * typ.length)];
+     reply(random)
+    A17.sendMessage(from, { sticker: safi });
+    } 
+    }
+	  
      
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
