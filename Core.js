@@ -1309,7 +1309,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const randomm = typp[Math.floor(Math.random() * typp.length)];
    if (isJig) await A17.sendMessage(from, { text: randomm });
-  if (!AntiBadWord) {
+  if (AntiBadWord) {
        let { chat, fromMe, id } = m;
     
     const key = {
@@ -1342,7 +1342,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const randomm = typp[Math.floor(Math.random() * typp.length)];
    if (isJig) await A17.sendMessage(from, { text: randomm });
-    if (!AntiBadWord) {
+    if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1373,7 +1373,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const randomm = typp[Math.floor(Math.random() * typp.length)];
    if (isJig) await A17.sendMessage(from, { text: randomm });
-   if (!AntiBadWord) {
+   if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1401,7 +1401,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
     if (isAbd) await A17.sendMessage(from, { text: 'قال ليك مرة الدعامة رفعوا عبد الله في البوكسي اتقلب بيهم😹😹😹' });
-     if (!AntiBadWord) {
+     if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1430,7 +1430,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-     if (!AntiBadWord) {
+     if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1496,7 +1496,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-   if (!AntiBadWord) {
+   if (AntiBadWord) {
       let { chat, fromMe, id } = m;
     
     const key = {
@@ -1522,7 +1522,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-    if (!AntiBadWord) {
+    if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1548,7 +1548,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-     if (!AntiBadWord) {
+     if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1573,7 +1573,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-    if (!AntiBadWord) {
+    if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1663,7 +1663,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
 	       'الجيش كرب 🦅🇸🇩🇸🇩🔥'];
    const random = typ[Math.floor(Math.random() * typ.length)];
    if (isJig) await A17.sendMessage(from, { text: random });
-   if (!AntiBadWord) {
+   if (AntiBadWord) {
     let { chat, fromMe, id } = m;
     
     const key = {
@@ -1798,7 +1798,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    let link = (`https://chat.whatsapp.com/${response}`);
     if (dd === link || ddd === link) {
     const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
-    const typ = ['زي جعبتك في الصيف', ];
+    const typ = ['زي جعبتك في الصيف'];
     const random = typ[Math.floor(Math.random() * typ.length)];
      reply(random)
     A17.sendMessage(from, { sticker: safi });
