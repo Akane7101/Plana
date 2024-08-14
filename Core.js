@@ -12032,6 +12032,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 
 
       case 'register':{
+	if (!isCreator) return reply (`هذا الأمر متوقف مؤقتا`) 
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
