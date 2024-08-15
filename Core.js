@@ -4856,7 +4856,7 @@ break;
         break;
 
 
-      case 'add': {
+   /*   case 'add': {
         if (!m.isGroup) return reply(mess.grouponly);
         if (!isBotAdmins) return reply(mess.botadmin);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
@@ -4866,7 +4866,7 @@ break;
         if (users.length == 0) return reply(`Please write the number of the person you want to add to thhis group`)
         await A17.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(`User Added Successfully!`)).catch((err) => reply(`Cannot add that user to this group!`))
       }
-        break;
+        break; */
 
 
       case 'invite': {
