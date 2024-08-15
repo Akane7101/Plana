@@ -1048,28 +1048,8 @@ Typed *surrender* to surrender and admited defeat`
           await fs.unlinkSync(encmedia);
 	}
    }
-	  if (smallinput.includes('jj')) {
-	 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
-	 let media = await getBuffer("https://graph.org/file/83d142ce507097d13351f.png");
-	    const sticker = new Sticker(media, {
-    pack: 'My Pack', // The pack name
-    author: 'Me', // The author name
-    })
 
-// or get Baileys-MD Compatible Object
-A17.sendMessage(from, { sticker : sticker }, { quoted: m });
-    }
-
-     if (smallinput.includes('ggh')) {
-    let media = await getBuffer("https://graph.org/file/f825b36c430c18c9ae0dd.png");
-const webpBuffer = await sharp(media)
-   .background({ r: 0, g: 0, b: 0, alpha: 0 }) // Add transparent background
-  .webp() 
-  .toBuffer();
-
-// Send sticker using A17 library 
-A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });      }
-
+     
 
     if (smallinput.includes('hug') || smallinput.includes('حضن')) {
     const sx = await axios.get("https://api.waifu.pics/sfw/hug");
@@ -1742,11 +1722,6 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 
     if (smallinput.includes('الناس تتماسك')) {
     reply (`بتماسكوا بي دا بس`);
-    } 
-
-
-    if (smallinput.includes('lmj')) {
-    A17.sendMessage(from, { text:  botNumber });
     } 
 
 
