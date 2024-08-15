@@ -1178,7 +1178,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
 	if (isBan) return reply(`ما برد على عبيد`);
-	    if (!isPlana) {
+	    if (!isPlana && !isCmd) {
 /*	 if (!isCmd && m.isGroup){
         const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
