@@ -1010,7 +1010,7 @@ Typed *surrender* to surrender and admited defeat`
     }
    // ...
 
-   if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
+/*   if (smallinput.includes('شوفونا') || smallinput.includes('شوفنا')) {
   const media = await getBuffer("https://media1.tenor.com/m/L4QUJbE-Zc8AAAAC/cat-cat-side-eye.gif");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
           await fs.unlinkSync(encmedia);	    
@@ -1041,7 +1041,7 @@ Typed *surrender* to surrender and admited defeat`
     } */
 
 
-    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
+/*    if (smallinput.includes('kiss') || smallinput.includes('بوسة')) {
 	if (tagg) {
     let media = await getBuffer("https://gifdb.com/images/thumbnail/ghost-hug-virtual-kiss-anime-girl-menhera-chan-c3fvyxsyb034zqbt.gif");
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
@@ -1086,20 +1086,7 @@ Typed *surrender* to surrender and admited defeat`
                 } 
 	   } */
 
-
-	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
-	if (!m.isGroup) {
-    await A17.sendMessage(from, { text: 'فانغ يوان اليركبك يا عب' });
-      let users = m.sender
-        await A17.updateBlockStatus(users, 'block').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-      const txtmsg = `*تم جغم مصاص ازبار الصينيين*`
-        for (let mod of global.Owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != '6297175943@s.whatsapp.net'))
-          await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
-          }
-	}
-
-
-    if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
+/*    if (smallinput.includes('مسا') || smallinput.includes('مثا')) {
     let media = await getBuffer("https://i.pinimg.com/originals/4d/89/d7/4d89d7f963b41a416ec8a55230dab31b.gif");
       if (isIssam) return reply('احلى مسا على احلى عصام🌹') 
     }
@@ -1164,16 +1151,6 @@ Typed *surrender* to surrender and admited defeat`
         await A17.sendMessage(m.chat, { delete: key })
         if (isAdmins && isCreator) return reply('تم') 
      }
-
-
-    if (smallinput.includes('يا نجم البحر')) {
-    let media = await getBuffer("https://mallucampaign.in/images/img_1710704094.jpg");
-          const webpBuffer = await sharp(media)
-         .webp({ animated: true }) // Set animated to true for animated stickers
-         .toBuffer();
-       // Send sticker using A17 library (replace with your actual function)
-       A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });  
-   }
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
@@ -1186,7 +1163,7 @@ Typed *surrender* to surrender and admited defeat`
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
 		} */
-      const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
+   /*   const tt = ['شاك يا زولي', 'خليل يا خليل اختو ليك بالجنزبيل', 'مالك يا اروالي'];
     const gg = tt[Math.floor(Math.random() * tt.length)];
     if (isShaq) reply (gg) 
     // قائمة بروابط الصور المختلفة
@@ -1755,7 +1732,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    reply (marisa);
     }
 */
- if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
+/* if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
     const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
     const typ = ['يختو ليك بتاع المطافي', 'اختو ليك وقّافي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
@@ -1888,7 +1865,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
      } */
 
 
-   if (smallinput.includes('زولي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
+/*   if (smallinput.includes('زولي') || smallinput.includes('مرتي') || smallinput.includes('حبيبتي')) {
    const typ = ['زولي السمين..الخبر', 'وين الناس', 'اخبار السكس شنو يا زولي'];
    const random = typ[Math.floor(Math.random() * typ.length)];
     if (isAbd) reply (random);
@@ -1904,7 +1881,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	 } */
 	  
 
-    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')){
+/*    if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')){
     if (!m.isGroup) {
     await A17.sendMessage(from, { text: 'بلوك' });
     await A17.sendContact(m.chat, global.Owner, m)
@@ -1938,7 +1915,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     if (isShaq) return reply (gg) 
 
       }
-
+*/
 /*
    if (smallinput.includes('ياسر')) {
     reply (`ياسر؟ قصدك المعللما عارف طيزوو من بطنو`);
