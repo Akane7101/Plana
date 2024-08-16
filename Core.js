@@ -1905,7 +1905,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	  
 
     if (smallinput.includes('cock') || smallinput.includes('dick') || smallinput.includes('seed') || smallinput.includes('boobs') || smallinput.includes('خول') || smallinput.includes('fuck') || smallinput.includes('naked') || smallinput.includes('hentai') || smallinput.includes('suck') || smallinput.includes('sex') || smallinput.includes('انيك') || smallinput.includes('كسم') || smallinput.includes('سكس') || smallinput.includes('قضيب') || smallinput.includes('زبي')){
-    if (!m.isGroup && !isCreator && !isZz) {
+    if (!m.isGroup) {
     await A17.sendMessage(from, { text: 'بلوك' });
     await A17.sendContact(m.chat, global.Owner, m)
         let users = m.sender
