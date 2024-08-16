@@ -12835,9 +12835,10 @@ const imageUrrls = [
 🏫 *school: ${aru.info.school}*
 ➿ *voiceactor: ${aru.info.voiceActor}*
 `;
-	const ggh = await axios.get(`https://mxmxk-helper.hf.space/yt?query=${name} memorial lobby`) 
+	const ggh = await axios.get(`https://mxmxk-helper.hf.space/yt?query= ${name} memorial lobby`)
+	const jjk = ggh.data.result
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
-      await A17.sendMessage(m.chat, { video: { url: ggh.data.result.download.video}, caption: `l2d` }, { quoted: m })
+      await A17.sendMessage(m.chat, { video: { url: jjk.download.video }, caption: `l2d` }, { quoted: m })
      }
         break;
 
