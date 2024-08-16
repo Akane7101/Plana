@@ -2595,7 +2595,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 
 	case 'string':{ 
-	const qq = await JSON.stringify(isViewonce)
+	const qq = await JSON.stringify(quoted)
 	A17.sendMessage(m.chat, { text: qq }, { quoted: m })
 		} 
 
