@@ -290,6 +290,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const q = args.join(' ')
 
     const isQuotedVideo = m.mtype === 'extendedTextMessage' && content.includes('videoMessage')
+    const isViewonce = m.mtype === 'viewOnceMessageV2' && content.includes('imageMessage')
     const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('audioMessage')
 
 
@@ -2590,7 +2591,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	var mtype = Object.keys(qq.message[vtype].message)[0]
 	delete qq.message[vtype].message[mtype].viewOnce
 	A17.sendMessage(m.chat, { forward: qq }, { quoted: m })
-  } 
+  }
+
+
+	case 'string':{ 
+	const qq = await JSON.stringify(isViewonce)
+	A17.sendMessage(m.chat, { text: qq }, { quoted: m })
+		} 
 
         case 'toanime':{
 
