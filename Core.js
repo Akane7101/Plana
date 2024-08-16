@@ -1178,7 +1178,6 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
 	if (isBan) return reply(`ما برد على عبيد`);
-	    if (isPlana) return;
 /*	 if (!isCmd && m.isGroup){
         const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
@@ -1271,6 +1270,7 @@ Typed *surrender* to surrender and admited defeat`
        // Send sticker usng A17 libray (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    }
+	  
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
@@ -1587,7 +1587,6 @@ Typed *surrender* to surrender and admited defeat`
       if (isBotAdmins && isTawfik) await A17.sendMessage(from, { text: 'خخخخخ توفيق يتكلم فرنسي' });
       if (isBotAdmins && isAdam) await A17.sendMessage(from, { text: 'يعني مش كفاية انك آدم كمان عايز تتكلم فرنسي' });
       if (isBotAdmins && isIssam) await A17.sendMessage(from, { text: 'عصام اتجنن ' });
-}
    }  
 
 
