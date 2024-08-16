@@ -1074,7 +1074,7 @@ Typed *surrender* to surrender and admited defeat`
     }
 
 
-    if (smallinput.includes('https://chat.whatsapp.com/')) {
+    /*   if (smallinput.includes('https://chat.whatsapp.com/')) {
 	if (!m.isGroup && !isPlana) {
 	  reply(`request added successfully..please wait till it get accepted`)
           const number = (`249904077717`)
@@ -1084,7 +1084,7 @@ Typed *surrender* to surrender and admited defeat`
           await A17.sendMessage(`${mod}`, { text: `${txtmsg}` }, { quoted: m })
           await A17.sendMessage(`120363026915700516@g.us`, { text: `${txtmsg}`, mentions: groupAdmins }, { quoted: m })
                 } 
-	   }
+	   } */
 
 
 	if (smallinput.includes('fang') || smallinput.includes('yuan')) {
@@ -1178,7 +1178,7 @@ Typed *surrender* to surrender and admited defeat`
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
 	if (isBan) return reply(`ما برد على عبيد`);
-	    if (!isPlana && !isCmd) {
+	    if (isPlana) return;
 /*	 if (!isCmd && m.isGroup){
         const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
@@ -1271,7 +1271,6 @@ Typed *surrender* to surrender and admited defeat`
        // Send sticker usng A17 libray (replace with your actual function)
        A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });   
    }
-	   }
 
     if (smallinput.includes('كسم') || smallinput.includes('لوطي') || smallinput.includes('خول')) {
     const typ = ['شنو لكن', 'اتلفظ يا سمين', 'عيب يا زولي'];
@@ -1574,7 +1573,7 @@ Typed *surrender* to surrender and admited defeat`
  
     
    if (smallinput.includes('فرنس') || smallinput.includes('france') || smallinput.includes('french') || smallinput.includes('🇫🇷')) {
-   if(!isPlana) {
+   if (isPlana) return;
     let { chat, fromMe, id } = m;
     
     const key = {
