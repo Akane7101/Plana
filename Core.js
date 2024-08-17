@@ -611,9 +611,12 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
 		}
- 
 
-
+         if (!m.isGroup && isCreator && m.mtype == 'imageMessage') 
+          let { GragphOrg } = require("./lib/uploader");
+            let anu = await GraphOrg(imageMessage);
+              reply(`${util.format(anu)}`)
+		     }
   /*  if (!isCmd && tagg && m.isGroup){
      const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
