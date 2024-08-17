@@ -6836,7 +6836,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/eb386fa698d8ba235933e.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUKQMUEXQAAJnTV.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1003_Himeko.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -6848,7 +6848,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/3a4d191f6699810ec1338.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUAFpufXkAAVoII.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1104_Gepard.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -6860,7 +6860,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/38dd3ebda87fcbf9b92c1.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUDyZRYWwAAeI4t.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1101_Bronya.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -6872,7 +6872,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/9d63136cc0a005e9e10e9.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUOsZTxXoAAO2L6.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1107_Clara.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -6884,7 +6884,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/0ca2368a263ca2d88e6a7.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUeVaU2XYAAHydy.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
 	buffer2 = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1211_Bailu.png`)
         A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
@@ -6896,7 +6896,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/0e8da9aec9a58831075ab.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUY-c6cXUAEiw7z.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1004_Welt.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -6909,7 +6909,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/bb03cd68be8a2f2f931b2.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUTqpy6W0AAMDWj.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1209_Yanqing.png");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7058,7 +7058,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/21593c5db414dbca162ca.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GUJGPk1XEAAsxbf.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://graph.org/file/21593c5db414dbca162ca.jpg");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7383,13 +7383,18 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 
        case 'jiaoqiu':
        case 'جياوشي':
+	case 'كلجة':{ 
+	if (text.includes('النيهيلتي') || text.includes('الطبيخ')) {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        A17.sendMessage(from, { react: { text: "🏳️‍🌈", key: m.key } })
         buffer = await getBuffer(`https://raw.githubusercontent.com/FortOfFans/HSR/main/ascension/1218_Jiaoqiu.png`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+	buffer2 = await getBuffer(`https://pbs.twimg.com/media/GU7wXbrW0AAuY2e.jpg`)
+        A17.sendMessage(from, { image: buffer2, caption: 'ْ'}, { quoted: m })
         break 
-
+	}
+	}
 
        case 'ميشا':
        case 'misha':
@@ -11987,8 +11992,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
 
 
       case 'register':{
-	if (!isCreator) return reply (`هذا الأمر متوقف مؤقتا`) 
-        if (isBan) return reply(mess.banned);
+	if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please provide an id!`)
@@ -12803,7 +12807,7 @@ const imageUrrls = [
 	const name = aru.character.name
         let arutxt = `
 🎀 *Name: ${aru.character.name}*
-🌟 *rarity: ${aru.character.rarity}
+🌟 *rarity: ${aru.character.rarity}*
 🍆*armorType: ${aru.character.armorType}*
 🎯 *bulletType: ${aru.character.bulletType}
 🚩*position: ${aru.character.position}*
@@ -12821,7 +12825,7 @@ const imageUrrls = [
 `;
 	const ggh = await axios.get(`https://mxmxk-helper.hf.space/yt?query=${name} memorial lobby`) 
        await A17.sendMessage(m.chat, { image: { url: aru.image.portrait}, caption: arutxt }, { quoted: m })
-        A17.sendMessage(m.chat, { video: { url: ggh.data.result.download.video }, caption: arutxt }, { quoted: m })
+        A17.sendMessage(m.chat, { video: { url: ggh.data.result.download.video }, caption: `L2d` }, { quoted: m })
      }
         break;
 
