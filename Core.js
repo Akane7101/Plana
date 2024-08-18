@@ -2585,7 +2585,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break; 
 
 	case 'view':{ 
-	var qq = await m.getQuotedObj()
+	var qq = await m.getQuotedMessage()
 	var vtype = Object.keys(qq.message)[0]
 	var mtype = Object.keys(qq.message[vtype].message)[0]
 	delete qq.message[vtype].message[mtype].viewOnce
