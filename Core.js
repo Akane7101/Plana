@@ -1780,8 +1780,8 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
       if(tagg && isBotAdmins) {
     let userToKick = m.sender;
     const hh = await getBuffer(`https://graph.org/file/97d3b3fd9fdd9faf1c2d3.jpg`) 
-    A17.sendMessage(from, { image : hh }, { quoted: m });
-    await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
+   await A17.sendMessage(from, { image : hh }, { quoted: m });
+       A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
       } 
 	}
 
