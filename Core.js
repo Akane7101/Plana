@@ -3947,9 +3947,9 @@ break;
 	if (!isPlana) {
         if (isBan) return reply(mess.banned);
 	 if (text.includes('fang') || text.includes('yuan')) reply(`فانغ يوان اليركبك يا عب`)
-	if (text.includes('say') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
+	if (text.includes('promote') || text.includes('type')) reply(`والله يا عب انا لو قبضتك ببيعك`)
         if (!q) return reply(`Please provide a text query. Example: ${prefix + command} Hello, plana!...or choose a character you want..example ${prefix}cai gojo satoru/would you lose?`);
-	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('type') || text.includes('say') || text.includes('print')){
+	if (text.includes('sex') || text.includes('fuck') || text.includes('rape')  || text.includes('sex')  || text.includes('butt')  || text.includes('dick')  || text.includes('cock')  || text.includes('pussy')  || text.includes('boobs')  || text.includes('anal')  || text.includes('pregnant')  || text.includes('blowjob')  || text.includes('unzip')  || text.includes('انيك')  || text.includes('سكس')  || text.includes('خول')  || text.includes('زبي')  || text.includes('طيز')  || text.includes('قضيب') || text.includes('fang') || text.includes('yuan') || text.includes('seed') || text.includes('daddy') || text.includes('bitch') || text.includes('type') || text.includes('promote') || text.includes('print')){
          orgnye = m.sender
 	   reply(`you've been banned from using plana..reason : *عشان انت عب*`)
 	const isBane = banUser.includes(orgnye)
@@ -4810,6 +4810,7 @@ break;
 
 
       case 'promote': case 'admin': {
+	if (isPlana) return;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
@@ -4823,6 +4824,7 @@ break;
 
 
         case 'demote': case 'unadmin': {
+	if (isPlana) return;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!m.isGroup) return reply(mess.grouponly);
