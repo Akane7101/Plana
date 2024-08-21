@@ -2682,6 +2682,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         break;
 
 
+     case 'privacy-all': {
+    const value = 'all' // 'contacts' | 'contact_blacklist'
+     await A17.updateGroupsAddPrivacy(value)
+	    }
+	break;
+
       case 'public': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
