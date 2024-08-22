@@ -1773,7 +1773,17 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
     A17.sendMessage(from, { sticker: safi });
     }
- }  
+ }
+
+  if (smallinput.includes('مشتاقين')) {
+    if(tagg) {
+   const typ = ['بالاكتر يا زولي خبرك شنو',
+		'انا ما مشتاقة ليك 😝😝😝',
+	       'انت منو'];
+   const random = typ[Math.floor(Math.random() * typ.length)];
+   reply(random)
+     }
+	    }
 
 
 	if (smallinput.includes('بالوعة') || smallinput.includes('بالوعه')) {
