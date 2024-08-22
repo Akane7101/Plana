@@ -7292,6 +7292,36 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
        A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
         break;
 
+	case 'feixiao':
+       case 'فيشاو':
+	case 'مزدلفة': 
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://telegra.ph/file/a59d232f8b750da8488a7.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ربيتي لكي جعز يا مزدلفة'}, { quoted: m })
+         break; 
+
+
+       case 'lingsha':
+       case 'لينغشا':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://telegra.ph/file/02edf14b15fa517961904.jpg`)
+        A17.sendMessage(from, { image: buffer }, { quoted: m })
+        break;
+
+
+	case 'موزي':
+       case 'moze':
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "💦", key: m.key } })
+        buffer = await getBuffer(`https://telegra.ph/file/6223c08297ff6f1eae75e.jpg`)
+        A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
+        break;
+
 
        case 'سوشانغ':
        case 'sushang':
@@ -8394,9 +8424,9 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1717774594.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/1277b998fd2b3d04e9c85.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1717774595.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/2e56a17aa87eda27d6b15.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
         break;        
 
@@ -9950,7 +9980,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         case 'card-razor':{
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
+       let { GraphOrg } = require("./lib/uploader");
         if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-ayaka 733507614`)
          if (/image/.test(mime)) {
            let media = await A17.downloadAndSaveMediaMessage(quoted)
@@ -13957,6 +13987,21 @@ last login: ${aru.lastLogin}
                         "buttonParamsJson": `{"display_text":"كلجة النيهيلتي","id":"${prefix}Jiaoqiu"}`
 
                       },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"feixiao","id":"${prefix}فيشاو"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"lingsha","id":"${prefix}lingsha"}`
+
+                      },
+			    {
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"moze","id":"${prefix}moze"}`
+
+                      },
 			    
                     ]
                   })
@@ -14329,7 +14374,7 @@ last login: ${aru.lastLogin}
                       },
                            {
 			      "name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"arlecchino","id":"${prefix}arlecchino"}`
+                        "buttonParamsJson": `{"display_text":"مرت كرز","id":"${prefix}arlecchino"}`
 
                       },
                            {
