@@ -8424,7 +8424,22 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         buffer2 = await getBuffer(`https://telegra.ph/file/2e56a17aa87eda27d6b15.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-        break;        
+        break;
+
+
+	case 'مرت':{ 
+	if (text.includes('كرز')) { 
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
+        buffer1 = await getBuffer(`https://telegra.ph/file/1277b998fd2b3d04e9c85.jpg`)
+        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
+        buffer2 = await getBuffer(`https://telegra.ph/file/2e56a17aa87eda27d6b15.jpg`)
+        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+	}
+	}
+        break; 
+	
 
 
      case 'chiori':
