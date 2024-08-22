@@ -7523,11 +7523,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714356455.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/416aa992b524e5d6fafdc.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714356456.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/b2401120e9a1b4ff3169f.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714356457.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/daf955d2b94094e0505bd.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7538,11 +7538,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714356959.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/188d4edd7fae37c41ceae.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714356958.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/d064867a2f1aa340e3cc9.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714356957.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/69b5b9ea0cfb232d8e830.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7552,11 +7552,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357056.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/a5c57f1589d7d844f8933.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357055.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/7be44f0e365d0fa821144.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714357057.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/d8fb9c5b2a5f6d0daae59.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7566,9 +7566,9 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357191.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/fd170deb64f62a8608e58.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357190.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/2e9318a765c5b364865fa.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
        break;
 
@@ -7578,7 +7578,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357344.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/add8f8e8f41fda05ade2d.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         break;
 
@@ -7587,11 +7587,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
       case 'aloy':
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357423.jpg`)
-        A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357394.jpg`)
-        A17.sendMessage(from, { image: buffer2 }, { quoted: m })
+	reply(`ابل الضحك يا زولي فكت منك ولا شنو..انت جادي داير تبني الوي؟؟`) 
         break;
 
 
@@ -7600,7 +7596,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357478.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/9e28ae643eda79205576e.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         break;
 
@@ -7610,11 +7606,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357537.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/5801357cb57de1a41c082.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357538.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/742186de0692999c77eac.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714357539.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/9ca08980aaf7610fabad8.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7625,11 +7621,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357634.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/1ea22ee17ad1c3d832c6e.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357607.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/9750518c590841b230492.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714357606.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/e398b84f3472521672f4c.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7639,11 +7635,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357831.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/81e5583e2bbdd288a0186.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357830.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/4690867b621d36df72af6.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714357829.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/1c3964980894005a09a5b.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7654,9 +7650,9 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714357905.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/c03cd2ce1666aaccda0cc.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714357906.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/5a106c12bf0b8176cb5d3.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
         break;
 
@@ -7666,13 +7662,13 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714358006.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/d2ef51ee34415d4d15052.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714358005.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/177cc4b3f24a80cae102d.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714358004.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/a26d2ac8dd5b50c00479f.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
-        buffer4 = await getBuffer(`https://mallucampaign.in/images/img_1714358003.jpg`)
+        buffer4 = await getBuffer(`https://telegra.ph/file/94b5e4d4f52f37730c33a.jpg`)
         A17.sendMessage(from, { image: buffer4 }, { quoted: m })
         break;
 
@@ -7682,7 +7678,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714358119.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/f0c48cb8707e978afb2f6.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
         break;
 
@@ -7692,11 +7688,11 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714360028.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/5c549b2bde3395b40fc6c.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714360029.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/ea3a65fe938daba1d2f6c.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
-       buffer3 = await getBuffer(`https://mallucampaign.in/images/img_1714360030.jpg`)
+       buffer3 = await getBuffer(`https://telegra.ph/file/f79b0f61ba2b5c0f7603f.jpg`)
         A17.sendMessage(from, { image: buffer3 }, { quoted: m })
         break;
 
@@ -7706,9 +7702,9 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
-        buffer1 = await getBuffer(`https://mallucampaign.in/images/img_1714360118.jpg`)
+        buffer1 = await getBuffer(`https://telegra.ph/file/d72a9b891ca402d4fcfab.jpg`)
         A17.sendMessage(from, { image: buffer1 }, { quoted: m })
-        buffer2 = await getBuffer(`https://mallucampaign.in/images/img_1714360119.jpg`)
+        buffer2 = await getBuffer(`https://telegra.ph/file/a4419df7d7ccabb71d783.jpg`)
         A17.sendMessage(from, { image: buffer2 }, { quoted: m })
         break;
 
