@@ -6020,11 +6020,11 @@ _Click the button below to download_`
         const kk = jj.data
 	const titlee = kk.title
 	const thumbb = kk.thumbnail
-	const hd = kk.formats.video.mp4[0].convert
-	const hdd = kk.formats.video.mp4[1].convert
-	const hddd = kk.formats.video.mp4[2].convert
-	const sd = kk.formats.video.mp4[3].convert
-	const sdd = kk.formats.video.mp4[4].convert
+	const hd = kk.formats.video["mp4"][0].convert
+	const hdd = kk.formats.video["mp4"][1].convert
+	const hddd = kk.formats.video["mp4"][2].convert
+	const sd = kk.formats.video["mp4"][3].convert
+	const sdd = kk.formats.video["mp4"][4].convert
 	try {
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
             viewOnceMessage: {
