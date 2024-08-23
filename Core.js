@@ -6019,12 +6019,12 @@ _Click the button below to download_`
         const jj = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${anu.url}`)
         const kk = jj.data
 	const title = kk.title
-	const thumb = kk.thumbnail
-	const hd1 = kk.formats.video.mp4[0].convert
-	const hd2 = kk.formats.video.mp4[1].convert
-	const hd3 = kk.formats.video.mp4[2].convert
-	const sd1 = kk.formats.video.mp4[3].convert
-	const sd2 = kk.formats.video.mp4[4].convert
+	const thumbb = kk.thumbnail
+	const hd = kk.formats.video.mp4[0].convert
+	const hdd = kk.formats.video.mp4[1].convert
+	const hddd = kk.formats.video.mp4[2].convert
+	const sd = kk.formats.video.mp4[3].convert
+	const sdd = kk.formats.video.mp4[4].convert
 	try {
 	let msg = generateWAMessageFromContent(m.key.remoteJid, {
             viewOnceMessage: {
@@ -6041,7 +6041,7 @@ _Click the button below to download_`
                     text: "            choose the quality you desire"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: thumb }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: thumbb }, { upload: A17.waUploadToServer })),
 
 
                     title: "                      results",
@@ -6051,31 +6051,30 @@ _Click the button below to download_`
                   nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
                     buttons: [
 			    {
-                        name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"1080p60","id":"${prefix}mp4 ${hd1}"}`
-
-							      }, 
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"1080p60","id":"${prefix}mp4 ${hd}"}`
+                             }, 
 			    
                       {
-                        name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"720p","id":"${prefix}mp4 ${hd2}"}`
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"720p","id":"${prefix}mp4 ${hdd}"}`
 
                       }, 
 			    {
-                        name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"720p60fps","id":"${prefix}mp4 ${hd3}"}`
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"720p60fps","id":"${prefix}mp4 ${hddd}"}`
 
                       },
 			    {
-                        name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"480p","id":"${prefix}mp4 ${sd1}"}`
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"480p","id":"${prefix}mp4 ${sd}"}`
 
                       },
 			    {
-                        name": "quick_reply",
-                        "buttonParamsJson": `{"display_text":"360p","id":"${prefix}mp4 ${sd2}"}`
+                        "name": "quick_reply",
+                        "buttonParamsJson": `{"display_text":"360p","id":"${prefix}mp4 ${sdd}"}`
 
-                      }, 
+                      } 
                     ]
                   })
                 })
