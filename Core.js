@@ -6014,11 +6014,11 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍃", key: m.key } })
 	 let yts = require("youtube-yts")
-        let search = await yts(text)
-        let anu = search.videos[0]
-        const jj = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${anu.url}`)
+        let search = await yts(args.join(" "))
+        let url = search.all[0].url
+        const jj = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${url}`)
         const kk = jj.data
-	const title = kk.title
+	const titlee = kk.title
 	const thumbb = kk.thumbnail
 	const hd = kk.formats.video.mp4[0].convert
 	const hdd = kk.formats.video.mp4[1].convert
@@ -6035,7 +6035,7 @@ _Click the button below to download_`
                 },
                 interactiveMessage: proto.Message.InteractiveMessage.create({
                   body: proto.Message.InteractiveMessage.Body.create({
-                    text: title
+                    text: titlee
                   }),
                   footer: proto.Message.InteractiveMessage.Footer.create({
                     text: "            choose the quality you desire"
