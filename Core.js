@@ -6019,7 +6019,6 @@ _Click the button below to download_`
         const jj = await axios.get(`https://skizo.tech/api/y2mate?apikey=plana&url=${url}`)
         const kk = jj.data
 	const titlee = kk.title
-	const thumbb = kk.thumbnail
 	const hd = kk.formats.video["mp4"][0].convert
 	const hdd = kk.formats.video["mp4"][1].convert
 	const hddd = kk.formats.video["mp4"][2].convert
@@ -6041,7 +6040,7 @@ _Click the button below to download_`
                     text: "            choose the quality you desire"
                   }),
                   header: proto.Message.InteractiveMessage.Header.create({
-                    ...(await prepareWAMessageMedia({ image: thumbb }, { upload: A17.waUploadToServer })),
+                    ...(await prepareWAMessageMedia({ image: { url: kk.thumbnail } }, { upload: A17.waUploadToServer })),
 
 
                     title: "                      results",
