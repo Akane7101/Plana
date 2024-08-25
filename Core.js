@@ -1122,7 +1122,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!isAdmins && !isCreator) return reply('🤏')
 	if (tagg && !isAbd) return reply (`شنو يااااا`) 
 	if (tagg && isAbd) {
-	 reply (`يطلع فيك زبي`)
+	 reply (`معقولة يا عبد الله داير تخليني خلاص 💔💔..و الفي بطني دا اوديهو وين طيب😭`)
 	let users = m.sender
 	await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
 	} else if (braa) {
@@ -1154,6 +1154,7 @@ Typed *surrender* to surrender and admited defeat`
     
 
     if (smallinput.includes('plana') || smallinput.includes('بلانا') || smallinput.includes('البوت')) {
+	if (isPlana) return;
 	if (isBan) return reply(`ما برد على عبيد`);
 /*	 if (!isCmd && m.isGroup){
         const typ = ['plana', 'arona', 'adamxion'];
