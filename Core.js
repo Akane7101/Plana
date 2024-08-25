@@ -5822,12 +5822,12 @@ _Click the button below to download_`
             const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
-	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	const imageCount = 10;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
         A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
-      } 
+      }
+	await A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	} else if (text.includes(`genshin`) || text.includes(`قنشن`)) { 
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=genshin`)
         let search = jjk.data.codes
@@ -5841,12 +5841,12 @@ _Click the button below to download_`
             const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
-	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	const imageCount = 15;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
         A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
 	}
+	await A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	} else if (text.includes(`zzz`) || text.includes(`zenless`)) { 
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=nap`)
         let search = jjk.data.codes
@@ -5860,12 +5860,12 @@ _Click the button below to download_`
             const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
-	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	const imageCount = 10;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
         A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
 	} 
+	await A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	   } else if (text.includes(`hi3`) || text.includes(`honkai impact`)) { 
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=honkai3rd`)
         let search = jjk.data.codes
@@ -5879,12 +5879,12 @@ _Click the button below to download_`
             const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
-	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	const imageCount = 10;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
         A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
 	}
+	await A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	} else { 
 	reply(`error retrieving redemption codes..available games are : genshin impact/honkai star rail/honkai impact 3rd/zenless zone zero`)
 	}
