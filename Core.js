@@ -5809,20 +5809,86 @@ _Click the button below to download_`
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
 
         if (!text) return reply(`choode the game you want..Example : .codes hsr`)
+	if (text.includes(`hsr`) || text.includes(`honkai star rail`) || text.includes(`هونكاي`)) { 
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=hkrpg`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
-	const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=honkai star rail`)
-        const sensei = shiroko.data;
-	const hj = sensei[Math.floor(Math.random() * sensei.length)];
-        let media = await getBuffer(hj);
+	const typ = ['plana', 'arona', 'adamxion'];
+        const apiKey = typ[Math.floor(Math.random() * typ.length)];
+        const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=honkai star rail`);
+        const images = apiResponse.data.data;
+	const imageCountt = 1;
+        for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
+            const randomImageUrl = images[j].media.url;
+	}
+        let media = await getBuffer(randomImageUrl);
+	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
 	const imageCount = 10;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
-       await A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
-       A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
-      }
+        A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
+      } 
+	} else if (text.includes(`genshin`) || text.includes(`قنشن`)) { 
+	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=genshin`)
+        let search = jjk.data.codes
+        let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
+	const typ = ['plana', 'arona', 'adamxion'];
+        const apiKey = typ[Math.floor(Math.random() * typ.length)];
+        const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=genshin`);
+        const images = apiResponse.data.data;
+	const imageCountt = 1;
+        for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
+            const randomImageUrl = images[j].media.url;
 	}
+        let media = await getBuffer(randomImageUrl);
+	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
+	const imageCount = 10;
+        for (let j = 0; j < imageCount && j < search.length; j++) {
+        const coodes = search[j].code;
+        A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
+	}
+	} else if (text.includes(`zzz`) || text.includes(`zenless`)) { 
+	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=nap`)
+        let search = jjk.data.codes
+        let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
+	const typ = ['plana', 'arona', 'adamxion'];
+        const apiKey = typ[Math.floor(Math.random() * typ.length)];
+        const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=zenless zone zero`);
+        const images = apiResponse.data.data;
+	const imageCountt = 1;
+        for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
+            const randomImageUrl = images[j].media.url;
+	}
+        let media = await getBuffer(randomImageUrl);
+	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
+	const imageCount = 10;
+        for (let j = 0; j < imageCount && j < search.length; j++) {
+        const coodes = search[j].code;
+        A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
+	} 
+	   } else if (text.includes(`hi3`) || text.includes(`honkai impact`)) { 
+	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=honkai3rd`)
+        let search = jjk.data.codes
+        let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
+	const typ = ['plana', 'arona', 'adamxion'];
+        const apiKey = typ[Math.floor(Math.random() * typ.length)];
+        const apiResponse = await axios.get(`https://skizo.tech/api/pinterest?apikey=${apiKey}&search=honkai impact 3rd`);
+        const images = apiResponse.data.data;
+	const imageCountt = 1;
+        for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
+            const randomImageUrl = images[j].media.url;
+	}
+        let media = await getBuffer(randomImageUrl);
+	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
+	const imageCount = 10;
+        for (let j = 0; j < imageCount && j < search.length; j++) {
+        const coodes = search[j].code;
+        A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
+	}
+	} else { 
+	reply(`error retrieving redemption codes..available games are : genshin impact/honkai star rail/honkai impact 3rd/zenless zone zero`)
+	}
+		}
         break;
 
 
