@@ -5808,7 +5808,7 @@ _Click the button below to download_`
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
 
-        if (!args.join(" ")) return reply(`choode the game you want..Example : .codes hsr`)
+        if (!text) return reply(`choode the game you want..Example : .codes hsr`)
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=hkrpg`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
@@ -5820,12 +5820,10 @@ _Click the button below to download_`
 	const imageCount = 10;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
-	 }
-	for (let i of search.all) {
-          teks += `code No : ${no++}\n\ncode : ${coodes} \n\n\n-----------------------------------------------------------------------------\n\n\n`
-        }
+         teks += `code No : ${no++}\n\ncode : ${coodes} \n\n\n-----------------------------------------------------------------------------\n\n\n`
         A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
       }
+	}
         break;
 
 
