@@ -5819,7 +5819,7 @@ _Click the button below to download_`
         const images = apiResponse.data.data;
 	const imageCountt = 1;
         for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
-            const randomImageUrl = images[j].media.url;
+            const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
 	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
@@ -5838,11 +5838,11 @@ _Click the button below to download_`
         const images = apiResponse.data.data;
 	const imageCountt = 1;
         for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
-            const randomImageUrl = images[j].media.url;
+            const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
 	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
-	const imageCount = 10;
+	const imageCount = 15;
         for (let j = 0; j < imageCount && j < search.length; j++) {
         const coodes = search[j].code;
         A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
@@ -5857,7 +5857,7 @@ _Click the button below to download_`
         const images = apiResponse.data.data;
 	const imageCountt = 1;
         for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
-            const randomImageUrl = images[j].media.url;
+            const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
 	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
@@ -5876,7 +5876,7 @@ _Click the button below to download_`
         const images = apiResponse.data.data;
 	const imageCountt = 1;
         for (let jj = 0; jj < imageCountt && jj < images.length; jj++) {
-            const randomImageUrl = images[j].media.url;
+            const randomImageUrl = images[jj].media.url;
 	}
         let media = await getBuffer(randomImageUrl);
 	A17.sendMessage(m.chat, { image: media, caption: teks }, { quoted: m })
