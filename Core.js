@@ -5811,7 +5811,7 @@ _Click the button below to download_`
         if (!text) return reply(`choode the game you want..Example : .codes hsr`)
 	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=hkrpg`)
         let search = jjk.data.codes
-        let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text'
+        let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text''
 	const shiroko = await axios.get(`https://weeb-api.vercel.app/wallpaper?query=honkai star rail`)
         const sensei = shiroko.data;
 	const hj = sensei[Math.floor(Math.random() * sensei.length)];
