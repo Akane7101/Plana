@@ -1733,13 +1733,13 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
    reply (marisa);
     }
 */
- if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
+/* if (smallinput.endsWith('صافي') || smallinput === 'صافي' ) {
     const safi = fs.readFileSync('./system/STK-20240707-WA0175.webp')
     const typ = ['يختو ليك بتاع المطافي', 'اختو ليك وقّافي'];
     const random = typ[Math.floor(Math.random() * typ.length)];
      reply(random)
     A17.sendMessage(from, { sticker: safi });
-        }
+        } 
 
 
     if (smallinput.endsWith('كيف') || smallinput === 'كيف' ) {
@@ -1755,7 +1755,7 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
     A17.sendMessage(from, { sticker: safi });
     } 
     }
-	  
+	  */
      
     if (smallinput.includes('انا ككروت') || smallinput.includes('انا كاكاروت') || smallinput.includes('انا كاكروت') || smallinput.includes('انا ككروت')) {
    const typ = ['كاكاروت اليركبك يا عب', 'وانا بلانا', 'دا زاتو كاكاروت تعال اتعرف عليهو🍆 🥰'];
@@ -1804,12 +1804,6 @@ if (smallinput.includes('زبي في جعبتك') || smallinput.includes('ظوب
 	   await A17.groupParticipantsUpdate(m.chat, [userToKick], 'remove');
 	       }
     }
-
-    if (smallinput.includes('لباسك ناصل')) {
-   if (tagg) {
-	 reply(`ناصل عشان العتلة دي مستنياك يا زولي`) 
-  }
-	    }
 
 
     if (smallinput.includes('249122331430')) {
