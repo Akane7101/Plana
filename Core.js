@@ -84,7 +84,7 @@ if (time2 < "05:00:00") {
 
 
 
-// hhhjkjgkkhghjhkكkhkmgkhkkjjgghhkاggkkhgkjghgاggk
+// hhhjkjgkkhghjhkكkhkmgkhkgkjjgghhkاggkkhgkjghgاggk
 const timestampe = speed();
 const latensie = speed() - timestampe
 
