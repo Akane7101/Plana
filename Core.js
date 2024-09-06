@@ -613,7 +613,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 		}
 
         
-  /*  if (!isCmd && tagg && m.isGroup){
+  /* ا if (!isCmd && tagg && m.isGroup){
      const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         
@@ -2464,8 +2464,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (isBanChat) return reply(mess.bangc);
 	try {
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        let { GraphOrg } = require("./lib/uploader");
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
         let anu = await GraphOrg(media);
