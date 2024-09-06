@@ -431,7 +431,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !isMm && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0XxMhJQw9fqdcQBqLDNEC4sYYf2jRD841-M6vFWwhAg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=OhvTbGsmvY-5p9KWs4L3L9vEoKgOoNVAwdcaGsm_mhc&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         } 
@@ -3985,7 +3985,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=IivfWUExjCtWvOMMXSjbZSEo2vod2gQKagaCFBoEOUg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=kGtJkVUYTy8uH68zUuhy-fjoCY4g3W7ydT2zRKuW3S8&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -7266,7 +7266,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://graph.org/file/6bf88718dcd1ab42229e8.jpg`)
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GVwIUcfXwAAv3Qy.jpg`)
         A17.sendMessage(from, { image: buffer, caption: 'ْ'}, { quoted: m })
         buffer2 = await getBuffer("https://graph.org/file/8d0e9926bd5732d6573b8.jpg");
         A17.sendMessage(from, { image: buffer2, caption: 'ْ' }, { quoted: m });
@@ -7415,8 +7415,13 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "💦", key: m.key } })
-        buffer = await getBuffer(`https://telegra.ph/file/a59d232f8b750da8488a7.jpg`)
-        A17.sendMessage(from, { image: buffer, caption: 'ربيتي لكي جعز يا مزدلفة'}, { quoted: m })
+        buffer = await getBuffer(`https://pbs.twimg.com/media/GWtlB23WUAAYKDe.jpg`)
+        A17.sendMessage(from, { image: buffer}, { quoted: m })
+	buffer2 = await getBuffer(`https://pbs.twimg.com/media/GWtlB21W4AELUXm.jpg`)
+        A17.sendMessage(from, { image: buffer2}, { quoted: m })
+        buffer3 = await getBuffer(`https://pbs.twimg.com/media/GWtlCyKWQAEuI7b.jpg`)
+        A17.sendMessage(from, { image: buffer3}, { quoted: m })
+        
          break; 
 
 
