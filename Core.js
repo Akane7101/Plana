@@ -2374,6 +2374,17 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         m.reply(mess.jobdone)
       }
         break;
+
+
+	case 'tsto': {
+        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+
+        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        await A17.sendMessage(m.chat, { text : media }).catch((err) => fs.unlinkSync(media))
+      }
+        break; 
         
 
         case 'enhance':
