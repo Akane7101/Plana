@@ -2394,8 +2394,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2403,7 +2402,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         const api = typ[Math.floor(Math.random() * typ.length)];
         let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
-	})
       }
         break;
 
@@ -2413,8 +2411,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2437,7 +2434,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	*Similarity* :  ${sim}
 		`
         await A17.sendMessage(m.chat, { video: { url: hoshino.video}, caption: sensei }, { quoted: m })
-	})
           }
         break; 
        
@@ -2469,14 +2465,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
          let serika = await getBuffer(`https://api.neoxr.eu/api/nobg?apikey=mcandy&image=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
-	})
       }
         break;
 
@@ -2489,8 +2483,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 	const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2570,7 +2563,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
           await A17.relayMessage(msg.key.remoteJid, msg.message, {
             messageId: msg.key.id
           });
-       })
        } catch (error) {
           console.error('Error generating and relaying message:', error);
           return reply('Error generating and relaying message.');
@@ -2586,8 +2578,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2632,15 +2623,14 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 		} 
            break;
 		    
+		    
         case 'toanime':{
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        .then((response) => {
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
-    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         const typ = ['plana', 'arona', 'adamxion'];
