@@ -2392,15 +2392,17 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
+          const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
+    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-	const typ = ['plana', 'arona', 'adamxion'];
+        const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${util.format(anu)}`) 
+        let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
@@ -2409,13 +2411,15 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	case 'trace':{
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
+          const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
+    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-	 let serika = await axios.get(`https://api.trace.moe/search?anilistInfo&cutBorders&url=${util.format(anu)}`) 
+         let serika = await axios.get(`https://api.trace.moe/search?anilistInfo&cutBorders&url=${urll}`) 
 	 const hoshino = serika.data.result[0]
 	 const title = hoshino.anilist.title.native
 	 const ko = hoshino.anilist.isAdult
@@ -2463,13 +2467,15 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
+          const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
+    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-        let serika = await getBuffer(`https://api.neoxr.eu/api/nobg?apikey=mcandy&image=${util.format(anu)}`) 
+         let serika = await getBuffer(`https://api.neoxr.eu/api/nobg?apikey=mcandy&image=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
@@ -2481,12 +2487,15 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (isBanChat) return reply(mess.bangc);
 	try {
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-	let { uploadImage } = require("./lib/uploadImage.js");
+	const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
+    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await uploadImage(media);
-	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${anu}`);
+        const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${urll}`);
 	const mina = sauce.data["results"][0]
 	const gg = mina["header"]["similarity"] 
 	if (gg < 50) return reply(`ما عرفت والله يا زولي`)
@@ -2605,6 +2614,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
       }
         break; 
+		    
 
 	case 'view':{ 
 	var qq = await m.getQuotedMessage()
@@ -2619,21 +2629,23 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	const qq = await JSON.stringify(quoted)
 	A17.sendMessage(m.chat, { text: qq }, { quoted: m })
 		} 
-
+           break;
+		    
         case 'toanime':{
-
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
+          const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
+    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-          const typ = ['plana', 'arona', 'adamxion'];
+        const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=${api}&url=${util.format(anu)}`) 
-        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=${api}&url=${util.format(anu)} `)
+        let serika = await getBuffer(`https://skizo.tech/api/toanime?apikey=${api}&url=${urll}`) 
+        let shiroko = await axios.get(`https://skizo.tech/api/toanime?apikey=${api}&url=${urll}`)
         const sensei = shiroko.data.status;
         if (sensei === 400) {
             return reply("oops..daily limit reached..please wait for tomorrow reset");
