@@ -2447,6 +2447,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
          imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", `${media}`)
          .then((response) => console.log(response))
          .catch((error) => console.error(error));
+	 const urll = response.data.url
+	 reply(urll) 
           }
         break;  
 
