@@ -2475,7 +2475,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (isBanChat) return reply(mess.bangc);
 	try {
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        import uploadImage from '../lib/uploadImage.js'
+	let { uploadImage } = require("./lib/uploadImage.js");
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
