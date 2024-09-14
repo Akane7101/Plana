@@ -2235,19 +2235,35 @@ Then if I got any juice left I'm gonna get Sunday too`);
       }
 
 
-        case 'hh': { 
-  
-        const starrail = {
-        "uid": "724281429",
-        "lang": "ua",
-         };
-          
-        const response = await axios.post("https://starraillcard.up.railway.app/api/genshin/profile", starrail, { 
-          headers: { "Content-Type": "application/json"}, 
-     });
-          
-        await A17.sendMessage(m.chat, { text: response.json() }, { quoted: m });
-      } 
+        case 'hh': {   
+ const path = require('path');
+
+// Python code to execute (directly in the string)
+const pythonCode = `
+import asyncio
+import starrailcard
+
+async def main():
+    async with starrailcard.Card() as card:
+        data = await card.creat(701607417, style=2)
+        print(data)
+asyncio.run(main())
+`;
+
+exec(pythonCode, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`Error executing Python script: ${error}`);
+    return;
+  }
+
+  if (stderr) {
+    console.error(`Python error: ${stderr}`);
+    return;
+  }
+
+  console.log(`Python output: ${stdout}`); // Output the result
+});
+	} 
         break;
 
 
