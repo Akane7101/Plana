@@ -2397,13 +2397,13 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         .then((response) => {
         const urll = response.url;
-    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         let serika = await getBuffer(`https://skizo.tech/api/remini?apikey=${api}&url=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
+	})
       }
         break;
 
@@ -2416,7 +2416,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         .then((response) => {
         const urll = response.url;
-    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
          let serika = await axios.get(`https://api.trace.moe/search?anilistInfo&cutBorders&url=${urll}`) 
@@ -2438,6 +2437,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	*Similarity* :  ${sim}
 		`
         await A17.sendMessage(m.chat, { video: { url: hoshino.video}, caption: sensei }, { quoted: m })
+	})
           }
         break; 
        
@@ -2472,11 +2472,11 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         .then((response) => {
         const urll = response.url;
-    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
          let serika = await getBuffer(`https://api.neoxr.eu/api/nobg?apikey=mcandy&image=${urll}`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
+	})
       }
         break;
 
@@ -2492,7 +2492,6 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         .then((response) => {
         const urll = response.url;
-    })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${urll}`);
@@ -2571,7 +2570,8 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
           await A17.relayMessage(msg.key.remoteJid, msg.message, {
             messageId: msg.key.id
           });
-        } catch (error) {
+       })
+       } catch (error) {
           console.error('Error generating and relaying message:', error);
           return reply('Error generating and relaying message.');
         }
@@ -2584,16 +2584,17 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
+          const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        .then((response) => {
+        const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
         const swn = args.join(" ")
         const width = swn.split("x")[0];
         const height = swn.split("x")[1];
-        let serika = await getBuffer(`https://resize.sardo.work/?imageUrl=${util.format(anu)}&width=${width}&height=${height}&quality=1`) 
+        let serika = await getBuffer(`https://resize.sardo.work/?imageUrl=${urll}&width=${width}&height=${height}&quality=1`) 
         await A17.sendMessage(m.chat, { image: serika }, { quoted: m })
       }
         break;
