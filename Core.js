@@ -2475,12 +2475,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (isBanChat) return reply(mess.bangc);
 	try {
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        let { UploadFileUgu } = require("./lib/uploader");
+        import uploadImage from '../lib/uploadImage.js'
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await UploadFileUgu(media);
-	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${util.format(anu)}`);
+        let anu = await uploadImage(media);
+	const sauce = await axios.get(`https://saucenao.com/search.php?api_key=aa7c9a5159533a7cfd79f60c4c4637df0243a8e1&dbs[]=9&output_type=2&testmode=0&numres=5&dedupe=0&url=${anu}`);
 	const mina = sauce.data["results"][0]
 	const gg = mina["header"]["similarity"] 
 	if (gg < 50) return reply(`ما عرفت والله يا زولي`)
