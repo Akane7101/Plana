@@ -2442,13 +2442,12 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { UploadFileUgu } = require("./lib/uploader");
-
-        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await UploadFileUgu(media);
-	reply(anu)
-	}
+          const imgbbUploader = require("imgbb-uploader");
+	let media = await A17.downloadAndSaveMediaMessage(quoted)
+         imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", `${media}`)
+         .then((response) => console.log(response))
+         .catch((error) => console.error(error));
+          }
         break;  
 
 
