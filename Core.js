@@ -4359,14 +4359,14 @@ break;
         break;
 
 
-    /*  case 'status': case 'post': {
+     case 'status': case 'post': {
         if (!isCreator) return reply(`هوي يا عب`)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
 	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,   ...global.db.users], broadcast: true });
         reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
-        break; */
+        break; 
 
 
 
@@ -5186,8 +5186,8 @@ break;
         const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
 	const serika = await getBuffer(urll)
-        await A17.sendMessage(m.chat, { video: serika }, gifPlayback: true, { quoted: m })
-            }
+        await A17.sendMessage(m.chat, { video: serika, gifPlayback: true},  { quoted: m })
+	}
         break;
 
 
