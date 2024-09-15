@@ -5757,10 +5757,10 @@ break;
         if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
         if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
         const fb = await axios.get(`https://skizo.tech/api/facebook?apikey=plana&url=${encodeURIComponent(q)}`)
-        const hd = fb.data[0].url
-	const sd = fb.data[1].url
-	await A17.sendMessage(m.chat, { video: hd, caption: `*720p*` }, { quoted: m })
-        await A17.sendMessage(m.chat, { video: sd, caption: `*360p*` }, { quoted: m })
+        const hd = fb.data[0]
+	const sd = fb.data[1]
+	await A17.sendMessage(m.chat, { video: { url: hd["url"] }, caption: `*720p*` }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: { url: sd["url"] }, caption: `*360p*` }, { quoted: m })
         } 
         break;
 
