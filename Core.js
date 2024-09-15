@@ -4363,8 +4363,7 @@ break;
         if (!isCreator) return reply(`هوي يا عب`)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-	global.users = Object.keys ( store.contacts || {})  // Getinng Contacts jid into USERS Array
-	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,   ...global.users], broadcast: true });
+	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,   ...global.db.users], broadcast: true });
         reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break; 
@@ -5125,24 +5124,22 @@ break;
         break;
 
 
-/*    case 'tovideo': case 'tomp4': {
+    case 'tovideo': case 'tomp4': {
        if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🪄", key: m.key } })
-        if (!m.quoted) return reply('reply GIF')
-        if (!/gif/.test(mime)) return reply(reply sticker with caption *${prefix + command}*) 
-        reply(mess.waiting)
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let ran = await getRandom('.mp4') 
-           exec(`ffmpeg -i ${media} -c copy ${ran}.mp4`, (err) => {
-     fs.unlinkSync(media);
-     if (err) throw err;
-     let buffer = fs.readFileSync(`${ran}.mp4`); 
-     A17.sendMessage(m.chat, { video: buffer }, { quoted: m });
-     fs.unlinkSync(`${ran}.mp4`);
-   });
-   }
-        break; */
+        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+        if (!m.quoted) return reply('reply Image')
+        if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
+        reply(mess.wait)
+        const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        const urll = response.url;
+	const serika = await getBuffer(urll)
+        await A17.sendMessage(m.chat, { video: serika } , { quoted: m })
+              }
+        break;
+
 
 
       case 'toaud': case 'makeaudio': case 'toaudio': {
@@ -5184,12 +5181,13 @@ break;
         if (!m.quoted) return reply('reply Image')
         if (!/webp/.test(mime)) return reply(`reply sticker with caption *${prefix + command}*`)
         reply(mess.wait)
-        let { webp2mp4File } = require('./lib/uploader')
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let webpToMp4 = await webp2mp4File(media)
-        await A17.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Converted From Webp To Gif' }, gifPlayback: true }, { quoted: m })
-        await fs.unlinkSync(media)
-      }
+        const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        const urll = response.url;
+	const serika = await getBuffer(urll)
+        await A17.sendMessage(m.chat, { video: serika }, gifPlayback: true, { quoted: m })
+            }
         break;
 
 
@@ -5210,18 +5208,6 @@ break;
       // await fs.unlinkSync(media)
       // }
       // break;
-
-
-        case "yg":{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-       let { GraphOrg } = require("./lib/uploader");      
-        if (m.quoted.isAnimated === true) {
-          let media =  await A17.downloadAndSaveMediaMessage(quoted);
-          let anu = await GraphOrg(media);
-          m.reply(`${anu}`);
-       } }
-          break; 
 
 
       case "tourl": case 'tolink':
@@ -6429,7 +6415,7 @@ break;
  //    const typ = ['808693688ecc695293359089', '2e0da1f78d1721134b21816d', '902c3bc9d8c08b0dcf8f5373', '85faf717d0545d14074659ad'];
  //   const api = typ[Math.floor(Math.random() * typ.length)];    
 
-    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDiosV2&query=${encodeURIComponent(q)}`);
+    const tawfik = await axios.get(`https://api.lolhuman.xyz/api/stickerwa?apikey=GataDiosV3&query=${encodeURIComponent(q)}`);
     reply(mess.waiting);
     const results = tawfik.data.result;
 
@@ -6529,36 +6515,34 @@ break;
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-	let { GraphOrg } = require("./lib/uploader");
-
+	const imgbbUploader = require("imgbb-uploader");
+	      
         if (!args.join(" ")) return reply(`use it like : .take plana/By: حسن زلقو`)
         const swn = args.join(" ")
         const pcknm = swn.split("/")[0];
         const atnm = swn.split("/")[1];
          if (m.quoted.isAnimated === true) {
-          let media = await quoted.download()
-          let enc = await A17.sendMessage(from, { sticker: media, packname: pcknm }, { quoted: m })
+	let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        const urll = response.url;
+	const serika = await getBuffer(urll) 
+          let encmedia = await A17.sendVideoAsSticker(m.chat, serika, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
-          let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}`} });
+          let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        const urll = response.url;
+           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv3&img=${urll}&package=${pcknm}&author=${atnm}`} });
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
         } else if (/webp/.test(mime)) {
-	let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let ran = await getRandom('.png')
-        exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-          fs.unlinkSync(media)
-          if (err) throw err
-          let buffer = fs.readFileSync(ran)
-        })
-  let anu = await GraphOrg(buffer);
- A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv2&img=${util.format(anu)}&package=${pcknm}&author=${atnm}`} })
-     fs.unlinkSync(ran)
+	let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+        const urll = response.url;
+        A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv3&img=${urll}&package=${pcknm}&author=${atnm}`} })
 	 }
 	 }
         break;
@@ -11722,7 +11706,7 @@ A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m });
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}danbooru plana`)
         reply(mess.waiting)
-        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=Gata_Dios&query=${q}`)
+        waifudd = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDiosv3&query=${q}`)
         /*       var wbuttsss = [
 {buttonId: `${prefix}قدور`, buttonText: {displayText: `>>`}, type: 1},
 ] */
@@ -13164,7 +13148,7 @@ last login: ${aru.lastLogin}
         A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
         if (!text) return reply(`Please proide a search term!\n\n*Example:* ${prefix}character Tachibana kanade`)
         
-        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=Gata_Dios&query=${q}`)
+        const character = await axios.get(`https://api.lolhuman.xyz/api/character?apikey=GataDiosv3&query=${q}`)
         reply(mess.waiting);
         const shiroko = character.data.result;
         let shirokotxt = `
