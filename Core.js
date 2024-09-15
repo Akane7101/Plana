@@ -4359,14 +4359,14 @@ break;
         break;
 
 
-      case 'status': case 'post': {
+    /*  case 'status': case 'post': {
         if (!isCreator) return reply(`هوي يا عب`)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
 	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,   ...global.db.users], broadcast: true });
         reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
-        break; 
+        break; */
 
 
 
