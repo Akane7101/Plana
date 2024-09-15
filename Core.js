@@ -5758,7 +5758,7 @@ break;
         if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
         const fb = await axios.get(`https://skizo.tech/api/facebook?apikey=plana&url=${encodeURIComponent(q)}`)
         const hd = fb.data[0].url
-	const sd = fb.data.[1].url
+	const sd = fb.data[1].url
 	await A17.sendMessage(m.chat, { video: hd, caption: `*720p*` }, { quoted: m })
         await A17.sendMessage(m.chat, { video: sd, caption: `*360p*` }, { quoted: m })
         } 
