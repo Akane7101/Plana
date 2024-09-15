@@ -5727,7 +5727,7 @@ break;
         
 
       ///
-      case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
+  /*    case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
         if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -5748,9 +5748,23 @@ break;
           reply(mess.error)
         })
       }
+        break; 
+*/
+
+     case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
+        if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+        if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
+        const fb = await axios.get(`https://skizo.tech/api/facebook?apikey=plana&url=${encodeURIComponent(q)}`)
+        const hd = fb.data[0].url
+	const sd = fb.data.[1].url
+	await A17.sendMessage(m.chat, { video: hd, caption: `*720p*` }, { quoted: m })
+        await A17.sendMessage(m.chat, { video: sd, caption: `*360p*` }, { quoted: m })
+        } 
         break;
 
-
+		    
       case 'fbmp3': case 'facebookmp3': case 'facebookaudio': {
         if (isBan) return reply(mess.banned);
         if (isBanChat) return reply(mess.bangc);
@@ -6005,7 +6019,7 @@ _Click the button below to download_`
 
         if (!q) return reply(`Please provide a query. Example: ${prefix + command} 295`);
 
-        let bbuffer = await axios.get(`https://api.lolhuman.xyz/api/spotifysearch?apikey=GataDiosv2&query=${encodeURIComponent(q)}`)
+        let bbuffer = await axios.get(`https://api.lolhuman.xyz/api/spotifysearch?apikey=GataDiosv3&query=${encodeURIComponent(q)}`)
  
         let bname = bbuffer.data.result[0].title
         let burl = bbuffer.data.result[0].external_urls.spotify;
