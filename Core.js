@@ -2401,7 +2401,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         const { readFile } = require("fs/promises");
         const image = await readFile(media);
         const sticker = await createSticker(image, { metadata: { packname: "Pack Name", author: "Author Name"}});
-        await A17.sendMessage(m.chat, { sticker : buffer }, { quoted: m })
+        await A17.sendMessage(m.chat, { sticker : sticker }, { quoted: m })
    }
         break; 
         
@@ -5138,8 +5138,9 @@ break;
          let media = await A17.downloadAndSaveMediaMessage(quoted);
         const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
-	const serika = await getBuffer(urll)
-        await A17.sendMessage(m.chat, { video: serika } , { quoted: m })
+	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
+	const sensei = serika.data.data.url
+        await A17.sendMessage(m.chat, { video: sensei } , { quoted: m })
               }
         break;
 
@@ -5188,8 +5189,9 @@ break;
          let media = await A17.downloadAndSaveMediaMessage(quoted);
         const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
-	const serika = await getBuffer(urll)
-        await A17.sendMessage(m.chat, { video: serika, gifPlayback: true},  { quoted: m })
+	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
+	const sensei = serika.data.data.url
+        await A17.sendMessage(m.chat, { video: sensei, gifPlayback: true},  { quoted: m })
 	}
         break;
 
@@ -6528,9 +6530,10 @@ break;
 	let media = await A17.downloadAndSaveMediaMessage(quoted);
         const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
         const urll = response.url;
-	const serika = await getBuffer(urll) 
-          let encmedia = await A17.sendVideoAsSticker(m.chat, serika, m, { packname: pcknm, author: atnm })
-          await fs.unlinkSync(enc)
+	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
+	const sensei = serika.data.data.url
+        let encmedia = await A17.sendVideoAsSticker(m.chat, sensei, m, { packname: pcknm, author: atnm })
+        await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
           let media = await A17.downloadAndSaveMediaMessage(quoted);
         const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
