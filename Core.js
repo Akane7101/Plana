@@ -2396,13 +2396,25 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-	const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
-	let media = await A17.downloadAndSaveMediaMessage(quoted)
-        const buffer = await new Sticker(media)
-    .setPack('My Pack')
-    .setAuthor('Me')
-    .setBackground('#000000')
+	const { Sticker, StickerTypes } = require('@shibam/sticker-maker')
+        const { Readable } = require('stream') 
 
+// Example 1: Create a new sticker instance and convert to buffer
+let media = await A17.downloadAndSaveMediaMessage(quoted)
+const sticker = new Sticker(media, {
+  pack: "My Sticker Pack",
+  author: "Shibam",
+  id: "123467890",
+  category: ['😂','😹'],
+  type: StickerTypes.DEFAULT,
+  quality: 30,
+});
+try {
+  const buffer = await sticker.toBuffer();
+  console.log("Sticker converted to buffer:", buffer);
+} catch (error) {
+  console.error("Error converting sticker to buffer:", error);
+}
 await A17.sendMessage(m.chat, { sticker : buffer }, { quoted: m })
    }
         break; 
