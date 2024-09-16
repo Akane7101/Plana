@@ -2396,10 +2396,15 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-        if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        await A17.sendMessage(m.chat, { text : media }).catch((err) => fs.unlinkSync(media))
-      }
+	const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
+	let media = await A17.downloadAndSaveMediaMessage(quoted)
+        const buffer = await new Sticker(media)
+    .setPack('My Pack')
+    .setAuthor('Me')
+    .setBackground('#000000')
+
+await A17.sendMessage(m.chat, { sticker : buffer }, { quoted: m })
+   }
         break; 
         
 
