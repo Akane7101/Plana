@@ -4366,7 +4366,7 @@ break;
         if (!isCreator) return reply(`هوي يا عب`)
         if (!quoted) return reply(`Send/reply Image With Caption ${prefix}status`)      
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,   ...global.db.users], broadcast: true });
+	await A17.sendMessage('status@broadcast', { image : media }, { statusJidList: [botNumber,"249904077717@s.whatsapp.net"], broadcast: true });
         reply(`*✨ ${pushname}...!! Posted On My Status ✨*`);
       }
         break; 
@@ -5140,7 +5140,8 @@ break;
         const urll = response.url;
 	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
 	const sensei = serika.data.data.url
-        await A17.sendMessage(m.chat, { video: sensei } , { quoted: m })
+	const buffer = await getBuffer(sensei)
+        await A17.sendMessage(m.chat, { video: buffer } , { quoted: m })
               }
         break;
 
@@ -5191,7 +5192,8 @@ break;
         const urll = response.url;
 	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
 	const sensei = serika.data.data.url
-        await A17.sendMessage(m.chat, { video: sensei, gifPlayback: true},  { quoted: m })
+	const buffer = await getBuffer(sensei) 
+        await A17.sendMessage(m.chat, { video: buffer, gifPlayback: true},  { quoted: m })
 	}
         break;
 
@@ -6535,20 +6537,24 @@ break;
         let encmedia = await A17.sendVideoAsSticker(m.chat, sensei, m, { packname: pcknm, author: atnm })
         await fs.unlinkSync(enc)
         } else if (/image/.test(mime)) {
-          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        const urll = response.url;
-           A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv3&img=${urll}&package=${pcknm}&author=${atnm}`} });
+          let media = await A17.downloadAndSaveMediaMessage(quoted)
+        const { createSticker } = require("sticker-maker-wa");
+        const { readFile } = require("fs/promises");
+        const image = await readFile(media);
+        const sticker = await createSticker(image, { metadata: { packname: pcknm, author: atnm}});
+        A17.sendMessage(from, { sticker: sticker } );
         } else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
           let encmedia = await A17.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
           await fs.unlinkSync(encmedia)
         } else if (/webp/.test(mime)) {
-	let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-        const urll = response.url;
-        A17.sendMessage(from, { sticker: { url: `https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=gatadiosv3&img=${urll}&package=${pcknm}&author=${atnm}`} })
+	let media = await A17.downloadAndSaveMediaMessage(quoted)
+        const { createSticker } = require("sticker-maker-wa");
+        const { readFile } = require("fs/promises");
+        const image = await readFile(media);
+        const sticker = await createSticker(image, { metadata: { packname: pcknm, author: atnm}});
+        A17.sendMessage(from, { sticker: sticker } );
 	 }
 	 }
         break;
@@ -6579,18 +6585,12 @@ break;
         A17.sendMessage(from, { react: { text: "🍆", key: m.key } })
 	let { GraphOrg } = require("./lib/uploader");
         if (/image/.test(mime)) {
-          let media = await quoted.download();
-
-// Find the original dimensions of the media
-const { width, height } = await sharp(media).metadata();
-
-const webpBuffer = await sharp(media)
-  .resize({ width, height }) // Resize to original dimensions
-  .webp({ animated: true })
-  .toBuffer();
-
-// Send sticker
-A17.sendMessage(from, { sticker: webpBuffer }, { quoted: m }); 
+        let media = await A17.downloadAndSaveMediaMessage(quoted)
+        const { createSticker } = require("sticker-maker-wa");
+        const { readFile } = require("fs/promises");
+        const image = await readFile(media);
+        const sticker = await createSticker(image, { metadata: { packname: global.packname, author: global.author}});
+        A17.sendMessage(from, { sticker: sticker }, { quoted: m }); 
 	} else if (/video/.test(mime)) {
           if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
           let media = await quoted.download()
