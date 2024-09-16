@@ -35,6 +35,7 @@
         "@bochilteam/scraper": "^5.0.1",
         "@develoka/angka-terbilang-js": "^1.4.2",
         "@hapi/boom": "^10.0.1",
+        "@shibam/sticker-maker": "^1.1.14",
         "@shineiichijo/mal-news-scraper": "^0.0.2",
         "@shineiichijo/marika": "^2.0.6",
         "@whiskeysockets/baileys": "^6.7.5",
