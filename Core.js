@@ -2236,8 +2236,7 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
         case 'hh': {   
-const pythonCode =
-'
+const pythonCode = `
 import asyncio
 import starrailcard
 
@@ -2245,15 +2244,22 @@ async def main():
     async with starrailcard.Card() as card:
         data = await card.creat(700649319, style=2)
 
-asyncio.run(main())'
-;
+asyncio.run(main())
+`;
 
-try {
-  const output = execSync(python -c "${pythonCode}").toString();
-  console.log('Python output:', output);
-} catch (error) {
-  console.error('Error executing Python script:', error);
-}
+const pythonProcess = spawn('python', ['-c', pythonCode]);
+
+pythonProcess.stdout.on('data', (data) => {
+    console.log('Python output:', data.toString());
+});
+
+pythonProcess.stderr.on('data', (data) => {
+    console.error('Python error:', data.toString());
+});
+
+pythonProcess.on('close', (code) => {
+    console.log(Python process exited with code ${code});
+});
 	} 
         break;
 
