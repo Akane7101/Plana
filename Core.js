@@ -2394,14 +2394,11 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 	case 'tsto': {
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-
-        if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
+        const ytdl = require("@distube/ytdl-core");
         let media = await A17.downloadAndSaveMediaMessage(quoted)
-        const { createSticker } = require("sticker-maker-wa");
-        const { readFile } = require("fs/promises");
-        const image = await readFile(media);
-        const sticker = await createSticker(image, { metadata: { packname: "Pack Name", author: "Author Name"}});
-        await A17.sendMessage(m.chat, { sticker : sticker }, { quoted: m })
+        const yy = await ytdl("https://youtube.com/watch?v=6F5sTpstJ_8");
+	console.log(yy)
+        await A17.sendMessage(m.chat, { video : yy }, { quoted: m })
    }
         break; 
         
