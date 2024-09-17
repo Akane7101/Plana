@@ -2413,9 +2413,11 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 	case 'tsto': {
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         const Encly = require("encly");
-        const data = new Encly.Profile();// get profile data
-data
-  .getProfile(857067560)
+        const card = new Encly.Card();
+
+// get link
+card
+  .getCard(857067560)
   .then((data) => {
     console.log(data);
   })
