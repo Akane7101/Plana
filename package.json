@@ -115,5 +115,6 @@
         "yargs": "^17.7.2",
         "youtube-yts": "^2.0.0",
         "youtubedl-core": "^4.11.7"
+        "y2mate-dl": "^1.0.4",
     }
     }
