@@ -2394,12 +2394,10 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 	case 'tsto': {
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        const ytdl = require("@distube/ytdl-core");
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        const yy = await ytdl("https://youtube.com/watch?v=6F5sTpstJ_8");
-	console.log(yy)
-        await A17.sendMessage(m.chat, { video : yy }, { quoted: m })
-   }
+        const { yt720 , yt480 , yt360 } = require('y2mate-dl');
+        const res = await yt720('https://youtu.be/0geqOYqwL0s'); // yt720 Or yt480 or yt360
+        console.log(res);
+           }
         break; 
         
 
