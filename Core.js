@@ -2238,6 +2238,26 @@ Then if I got any juice left I'm gonna get Sunday too`);
         case 'hh': {   
 const pythonCode = `
 import asyncio
+import subprocess
+
+try:
+    import starrailcard
+except ModuleNotFoundError:
+    subprocess.run(['pip', 'install', 'starrailcard'])
+`;
+
+const installModuleProcess = spawn('python3', ['-c', pythonCode]);
+
+installModuleProcess.stderr.on('data', (data) => {
+    console.error('Error installing module:', data.toString());
+});
+
+installModuleProcess.on('close', (code) => {
+    if (code === 0) {
+        console.log('Module installed successfully');
+        
+        const mainPythonCode = `
+import asyncio
 import starrailcard
 
 async def main():
@@ -2247,14 +2267,19 @@ async def main():
 asyncio.run(main())
 `;
 
-const pythonProcess = spawn('python', ['-c', pythonCode]);
+        const pythonProcess = spawn('python3', ['-c', mainPythonCode]);
 
-pythonProcess.stdout.on('data', (data) => {
-    console.log('Python output:', data.toString());
-});
+        pythonProcess.stdout.on('data', (data) => {
+            console.log('Python output:', data.toString());
+        });
 
-pythonProcess.stderr.on('data', (data) => {
-    console.error('Python error:', data.toString());
+        pythonProcess.stderr.on('data', (data) => {
+            console.error('Python error:', data.toString());
+        });
+
+    } else {
+        console.error('Failed to install module');
+    }
 });
 	} 
         break;
