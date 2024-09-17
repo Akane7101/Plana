@@ -2236,40 +2236,24 @@ Then if I got any juice left I'm gonna get Sunday too`);
 
 
         case 'hh': {   
-    const { execFile } = require('child_process');
+const pythonCode =
+'
+import asyncio
+import starrailcard
 
-   function runPythonScript() {
-     return new Promise((resolve, reject) => {
-       execFile('python3', ['import asyncio
-   import starrailcard
+async def main():
+    async with starrailcard.Card() as card:
+        data = await card.creat(700649319, style=2)
 
-   async def main():
-       async with starrailcard.Card() as card:
-           data = await card.creat(701607417, style=2)
-           print(data)
+asyncio.run(main())'
+;
 
-   asyncio.run(main())
-   '], (error, stdout, stderr) => {
-         if (error) {
-           reject(error);
-         } else if (stderr) {
-           reject(stderr);
-         } else {
-           resolve(stdout);
-         }
-       });
-     });
-   }
-
-   async function main() {
-     try {
-       const pythonOutput = await runPythonScript();
-       console.log(pythonOutput); 
-     } catch (error) {
-       console.error(error);
-     }
-   }
-   main();
+try {
+  const output = execSync(python -c "${pythonCode}").toString();
+  console.log('Python output:', output);
+} catch (error) {
+  console.error('Error executing Python script:', error);
+}
 	} 
         break;
 
