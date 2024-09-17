@@ -2394,9 +2394,16 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 	case 'tsto': {
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        const { yt720 , yt480 , yt360 } = require('y2mate-dl');
-        const res = await yt720('https://youtu.be/0geqOYqwL0s'); // yt720 Or yt480 or yt360
-        console.log(res);
+        const Encly = require("encly");
+        const data = new Encly.Profile();// get profile data
+data
+  .getProfile(857067560)
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
            }
         break; 
         
