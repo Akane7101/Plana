@@ -5870,7 +5870,7 @@ _Click the button below to download_`
 
         if (!text) return reply(`choode the game you want..Example : .codes hsr`)
 	if (text.includes(`hsr`) || text.includes(`honkai star rail`) || text.includes(`هونكاي`)) { 
-	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=hkrpg`)
+	const jjk = await axios.get(`https://hoyo-codes.seria.moe/codes?game=hkrpg`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
 	const imageCount = 10;
@@ -5879,7 +5879,7 @@ _Click the button below to download_`
        await A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
       }
 	} else if (text.includes(`genshin`) || text.includes(`قنشن`)) { 
-	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=genshin`)
+	const jjk = await axios.get(`https://hoyo-codes.seria.moe/codes?game=genshin`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
 	const imageCount = 15;
@@ -5888,7 +5888,7 @@ _Click the button below to download_`
         await A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
 	}
 	} else if (text.includes(`zzz`) || text.includes(`zenless`)) { 
-	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=nap`)
+	const jjk = await axios.get(`https://hoyo-codes.seria.moe/codes?game=nap`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
 	const imageCount = 10;
@@ -5897,7 +5897,7 @@ _Click the button below to download_`
        await A17.sendMessage(m.chat, { text : coodes }, { quoted: m })
 	} 
 	   } else if (text.includes(`hi3`) || text.includes(`honkai impact`)) { 
-	const jjk = await axios.get(`https://hoyo-codes.seriaati.xyz/codes?game=honkai3rd`)
+	const jjk = await axios.get(`https://hoyo-codes.seria.moe/codes?game=honkai3rd`)
         let search = jjk.data.codes
         let teks = '```「 hoyo redemption codes 」```\n\n game : ' + text + '\n\n'
 	const imageCount = 10;
