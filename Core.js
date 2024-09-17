@@ -2256,10 +2256,6 @@ pythonProcess.stdout.on('data', (data) => {
 pythonProcess.stderr.on('data', (data) => {
     console.error('Python error:', data.toString());
 });
-
-pythonProcess.on('close', (code) => {
-    console.log(Python process exited with code ${code});
-});
 	} 
         break;
 
