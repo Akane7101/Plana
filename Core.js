@@ -474,12 +474,11 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     } 
 
 
-    if (m.mtype == 'imageMessage' && isCreator && !isPlana && !m.isGroup){
+    if (m.mtype === 'imageMessage' && isCreator && !isPlana && !m.isGroup){
      const imgbbUploader = require("imgbb-uploader");
-         let media = await A17.downloadAndSaveMediaMessage(message);
-        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
-	console.log(response)
-	const urll = response.url
+     const media = await A17.downloadAndSaveMediaMessage(m.message.imageMessage); // Access image from m.message
+    const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media);
+    const urll = response.url;
 	reply(urll)
 	   }
    
