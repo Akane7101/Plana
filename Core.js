@@ -2515,8 +2515,7 @@ await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })
 
        case 'tsoo' : {
     // In your Core.js
-   import Audio2TextJS from 'audio2textjs/src/Audio2TextJS.js'; // Import ES Module
-
+   import { Audio2TextJS } from 'audio2textjs';
    // ... your code ...
    
 const converter = new Audio2TextJS({
