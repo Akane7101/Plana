@@ -479,7 +479,11 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media);
     console.log(response)
     const urll = response.url;
-	m.reply(urll)
+    const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
+    const ii = kk.data.data.prompt
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=EvcK-zIV93SGZJoa_BRZa3SoQ7psCHh222AOkfpIQVU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${ii}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
 	   }
    
 
