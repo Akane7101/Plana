@@ -1111,11 +1111,17 @@ Typed *surrender* to surrender and admited defeat`
     if (smallinput.includes('i love you') || smallinput.includes('بحبك') || smallinput.includes('love plana')) {
 	if (isBan) return reply(`يحبك الزب`);
     if (tagg) {
- buffer = await getBuffer("https://mallucampaign.in/images/img_1710652882.jpg");
+ buffer = await getBuffer("https://cdn.donmai.us/original/fc/33/__plana_blue_archive_drawn_by_sanz_zzz__fc3300ae450a9ae1f569a99ccbc0e6be.jpg");
     // إرسال الصورة
     A17.sendMessage(from, { image: buffer, caption: `plana loves you too ${pushname}` }, { quoted: m });
 	   }
 }
+
+
+    if (smallinput.includes('hamster') || smallinput.includes('هامستر')) {
+	  
+    A17.sendMessage(from, { sticker : { url :`https://i.ibb.co/V9GchFT/9d6171d5c0b5.webp`}}, { quoted: m });
+	    } 
 
 
     if (smallinput.includes('بلانا اطرديه') || smallinput.includes('حد يطرده') || smallinput.includes('اطلع برا')) {
