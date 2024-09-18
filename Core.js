@@ -2412,18 +2412,19 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 
 	case 'tsto': {
         A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-        const Encly = require("encly");
-        const card = new Encly.Card();
-
-// get link
-card
-  .getCard(857067560)
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((err) => {
-    console.log(err);
+        const { createSticker } = require("sticker-maker-wa");
+        const { readFile } = require("fs/promises");
+        const ffmpegPath = require("ffmpeg-static");
+	let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const video = await readFile(media);
+        const sticker = await createSticker(video, {
+         ffmpeg: ffmpegPath,
+    metadata: {
+      packname: "Pack Name",
+      author: "Author Name",
+    },
   });
+await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })  
            }
         break; 
         
