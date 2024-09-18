@@ -474,6 +474,15 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     } 
 
 
+    if (m.mtype == 'imageMessage' && isCreator && !isPlana && !m.isGroup){
+     const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(body);
+        const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media)
+	const urll = response.url
+	reply(urll)
+	   }
+   
+
     if (!isCmd && isAli && !isPlana && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
