@@ -2118,7 +2118,6 @@ Then if I got any juice left I'm gonna get Sunday too`);
     reply (`زلطه ؟ قصدك الحلبي الصبجه البلعب طيزعين فري وبلع بوكساات من هندي`);
   }
 
-
     if (smallinput.includes('سم السيسي')) {
     reply (`انت راجل محترم و متربي احسن تربية`);
     }
@@ -2512,6 +2511,33 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
 await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })  
            }
         break; 
+		    
+
+       case 'tsoo' : {
+ const Audio2TextJS = require ("audio2textjs");
+
+const converter = new Audio2TextJS({
+    threads: 4,
+    processors: 1,
+    outputJson: true,
+});
+let media = await A17.downloadAndSaveMediaMessage(quoted);
+const model = 'tiny'; // Specify one of the available models
+const language = 'auto'; // or specify a language code for translation
+
+converter.runWhisper(media, model, language)
+    .then(result => {
+        if (result.success) {
+            console.log('Conversion successful:', result.output);
+        } else {
+            console.error('Conversion failed:', result.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+      }
+      break;
         
 
         case 'enhance':
