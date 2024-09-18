@@ -447,7 +447,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=ycNvU-XBHiKupb7eoTuWyMzWmwWjHUqumliPvfQpf4A&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=ycNvU-XBHiKupb7eoTuWyMzWmwWjHUqumliPvfQpf4A&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
 	}
@@ -481,7 +481,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=mgMLd4iVNX7AeTA4ZlHaPo-iCdY5DboSLFb9cr1E2UQ&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=mgMLd4iVNX7AeTA4ZlHaPo-iCdY5DboSLFb9cr1E2UQ&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
    }
@@ -541,7 +541,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=Pn2NO1mzCsmgCaZ6Eocxqg2bOnlPUv2sk7qwHWgEYWo&sessionId=Y9WOS2dfBmOvFwNAzPIl0_v_iNzg_HNFFkE2bzxGYE4&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      } 
@@ -656,7 +656,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=I4xythFytrH0GKA7PpUV0oyOvv603DUjvxHtJiGwjGg&sessionId=5lWipLc8Js8qB3C_Zxb2w_5TpYgl0n2CFiv7QHvkJMU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=I4xythFytrH0GKA7PpUV0oyOvv603DUjvxHtJiGwjGg&sessionId=5lWipLc8Js8qB3C_Zxb2w_5TpYgl0n2CFiv7QHvkJMU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
     }
