@@ -474,6 +474,8 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     } 
 
     if (m.mtype == 'imageMessage' && isCreator && !isPlana && !m.isGroup){
+    const typ = ['plana', 'arona', 'adamxion'];
+    const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
     const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media);
