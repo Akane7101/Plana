@@ -428,7 +428,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
 */
 
     
-      if (!isCmd && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !isMm && !m.isGroup){
+      if (!isCmd && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !isMm && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=ycNvU-XBHiKupb7eoTuWyMzWmwWjHUqumliPvfQpf4A&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
