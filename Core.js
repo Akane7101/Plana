@@ -2514,7 +2514,7 @@ await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })
 		    
 
        case 'tsoo' : {
- const Audio2TextJS = require ("audio2textjs");
+ import Audio2TextJS from 'audio2textjs';
 
 const converter = new Audio2TextJS({
     threads: 4,
