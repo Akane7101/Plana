@@ -2513,34 +2513,16 @@ await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })
         break; 
 		    
 
-  /*     case 'tsoo' : {
-    // In your Core.js
-   import { Audio2TextJS } from 'audio2textjs';
-   // ... your code ...
-   
-const converter = new Audio2TextJS({
-    threads: 4,
-    processors: 1,
-    outputJson: true,
-});
+      case 'tsoo' : {
+const { Leopard } = require("@picovoice/leopard-node");
 let media = await A17.downloadAndSaveMediaMessage(quoted);
-const model = 'tiny'; // Specify one of the available models
-const language = 'auto'; // or specify a language code for translation
-
-converter.runWhisper(media, model, language)
-    .then(result => {
-        if (result.success) {
-            console.log('Conversion successful:', result.output);
-        } else {
-            console.error('Conversion failed:', result.message);
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
+const accessKey = "ohn1XgwAb+5yhEpTt1XsoDNs8DN/NvZTjRBDQdJ/JRvjPZaIlTFohA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+const leopard = new Leopard(accessKey);
+const result = leopard.processFile(media);
+console.log(result.transcript);
       }
       break;
-        */
+        
 
         case 'enhance':
         case 'upscale':{
