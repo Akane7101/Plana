@@ -493,7 +493,7 @@ console.log(result.transcript);
      }
 
 
-    if (!isCmd && isTawfik && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' && m.mtype != 'audioMessage' !isPlana && !m.isGroup){
+    if (!isCmd && isTawfik && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' && m.mtype != 'audioMessage' && !isPlana && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
