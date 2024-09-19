@@ -497,7 +497,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     }
 
 
-   if (!isCmd && m.mtype != 'imageMessage' && isCreator && !isPlana && !m.isGroup){
+   if (!isCmd && m.mtype != 'imageMessage' && m.mtype != 'audioMessage' && m.mtype != 'stickerMessage' && isCreator && !isPlana && !m.isGroup){
       const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=EvcK-zIV93SGZJoa_BRZa3SoQ7psCHh222AOkfpIQVU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
@@ -519,6 +519,37 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
 	   }
+
+
+    if (m.mtype == 'stickerMessage' && isCreator && !isPlana && !m.isGroup){
+    const typ = ['plana', 'arona', 'adamxion'];
+    const api = typ[Math.floor(Math.random() * typ.length)];
+     const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+    const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media);
+    console.log(response)
+    const urll = response.url;
+    const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
+    const ii = kk.data.data.prompt
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=EvcK-zIV93SGZJoa_BRZa3SoQ7psCHh222AOkfpIQVU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${ii}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    }
+
+
+    if (m.mtype == 'audioMessage' && isCreator && !isPlana && !m.isGroup){
+    const typ = ['plana', 'arona', 'adamxion'];
+    const api = typ[Math.floor(Math.random() * typ.length)];
+     const { Leopard } = require("@picovoice/leopard-node");
+     let media = await A17.downloadAndSaveMediaMessage(quoted);
+     const accessKey = "ohn1XgwAb+5yhEpTt1XsoDNs8DN/NvZTjRBDQdJ/JRvjPZaIlTFohA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+     const leopard = new Leopard(accessKey);
+      const result = leopard.processFile(media);
+      console.log(result.transcript);
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=EvcK-zIV93SGZJoa_BRZa3SoQ7psCHh222AOkfpIQVU&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${result.transcript}`)
+        menggoda = `${botreply.data.result.text}`
+        m.reply(menggoda)
+    } 
    
 
     if (!isCmd && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' && isAli && !isPlana && !m.isGroup){
