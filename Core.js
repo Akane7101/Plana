@@ -2513,7 +2513,7 @@ await A17.sendMessage(m.chat, { sticker: sticker }, { quoted: m })
         break; 
 		    
 
-       case 'tsoo' : {
+  /*     case 'tsoo' : {
     // In your Core.js
    import { Audio2TextJS } from 'audio2textjs';
    // ... your code ...
@@ -2540,7 +2540,7 @@ converter.runWhisper(media, model, language)
     });
       }
       break;
-        
+        */
 
         case 'enhance':
         case 'upscale':{
