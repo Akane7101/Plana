@@ -474,7 +474,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
 let media = await A17.downloadAndSaveMediaMessage(quoted);
-const accessKey = "ohn1XgwAb+5yhEpTt1XsoDNs8DN/NvZTjRBDQdJ/JRvjPZaIlTFohA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
 const leopard = new Leopard(accessKey);
 const result = leopard.processFile(media);
 console.log(result.transcript);
@@ -539,7 +539,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
 let media = await A17.downloadAndSaveMediaMessage(quoted);
-const accessKey = "ohn1XgwAb+5yhEpTt1XsoDNs8DN/NvZTjRBDQdJ/JRvjPZaIlTFohA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
 const leopard = new Leopard(accessKey);
 const result = leopard.processFile(media);
 console.log(result.transcript);
@@ -604,7 +604,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
      let media = await A17.downloadAndSaveMediaMessage(quoted);
-     const accessKey = "ohn1XgwAb+5yhEpTt1XsoDNs8DN/NvZTjRBDQdJ/JRvjPZaIlTFohA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+     const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
      const leopard = new Leopard(accessKey);
       const result = leopard.processFile(media);
       console.log(result.transcript);
@@ -2585,6 +2585,23 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         m.reply(mess.jobdone)
       }
         break;
+
+
+	case 'totxt': {
+
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
+
+        if (!quoted) return `*Send/reply audio* ${prefix + command}`
+        const { Leopard } = require("@picovoice/leopard-node");
+     let media = await A17.downloadAndSaveMediaMessage(quoted);
+     const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+     const leopard = new Leopard(accessKey);
+      const result = leopard.processFile(media);
+      console.log(result.transcript);
+        m.reply(result.transcript)
+      }
+        break; 
 
 
 	case 'tsto': {
