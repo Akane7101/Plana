@@ -474,7 +474,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
 let media = await A17.downloadAndSaveMediaMessage(quoted);
-const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+const accessKey = "8Re196/UiFkT0J2CiH0wRbCFNGBwTzABsz7OARHoxliYePhXOSdRBA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
 const leopard = new Leopard(accessKey);
 const result = leopard.processFile(media);
 console.log(result.transcript);
@@ -512,7 +512,7 @@ console.log(result.transcript);
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=mgMLd4iVNX7AeTA4ZlHaPo-iCdY5DboSLFb9cr1E2UQ&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${ii}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
    }
@@ -528,7 +528,7 @@ console.log(result.transcript);
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
     const ii = kk.data.data.prompt
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=mgMLd4iVNX7AeTA4ZlHaPo-iCdY5DboSLFb9cr1E2UQ&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${ii}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${ii}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
    }
@@ -539,11 +539,11 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
 let media = await A17.downloadAndSaveMediaMessage(quoted);
-const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+const accessKey = "8Re196/UiFkT0J2CiH0wRbCFNGBwTzABsz7OARHoxliYePhXOSdRBA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
 const leopard = new Leopard(accessKey);
 const result = leopard.processFile(media);
 console.log(result.transcript);
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=9hOqOT1nDBODBsh4-lWt42mAua7XAMlZMgLNL1JywL4&sessionId=mgMLd4iVNX7AeTA4ZlHaPo-iCdY5DboSLFb9cr1E2UQ&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${result.transcript}`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${result.transcript}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
    }
@@ -604,7 +604,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const { Leopard } = require("@picovoice/leopard-node");
      let media = await A17.downloadAndSaveMediaMessage(quoted);
-     const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+     const accessKey = "8Re196/UiFkT0J2CiH0wRbCFNGBwTzABsz7OARHoxliYePhXOSdRBA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
      const leopard = new Leopard(accessKey);
       const result = leopard.processFile(media);
       console.log(result.transcript);
@@ -2595,7 +2595,7 @@ const shiroko = await axios.get(apiUrl, { params: parameters })
         if (!quoted) return `*Send/reply audio* ${prefix + command}`
         const { Leopard } = require("@picovoice/leopard-node");
      let media = await A17.downloadAndSaveMediaMessage(quoted);
-     const accessKey = "1nvVEIbD1nyKC92MLAJVC9Cff/4UtPPDuxyWTiFu+a24usRCeKStSw=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
+     const accessKey = "8Re196/UiFkT0J2CiH0wRbCFNGBwTzABsz7OARHoxliYePhXOSdRBA=="; // Obtained from the Picovoice Console (https://console.picovoice.ai/)
      const leopard = new Leopard(accessKey);
       const result = leopard.processFile(media);
       console.log(result.transcript);
