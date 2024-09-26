@@ -495,7 +495,17 @@ console.log(result.transcript);
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
-    }
+          }
+
+
+   if (m.mtype == 'protocolMessage' && !isPlana){
+      const typ = ['https://i.ibb.co/KW7WxDf/c81d90ed28b1.webp',
+		   'https://i.ibb.co/JzCYdPX/ef6944691401.webp',
+		   'https://i.ibb.co/d7JQ57c/235318af3533.webp'];
+	            const api = typ[Math.floor(Math.random() * typ.length)];
+	            const ll = await getBuffer(api)
+                    await A17.sendMessage(m.chat, { sticker: ll }, { quoted: m })  
+   } 
 
 
    if (m.mtype == 'imageMessage' && isTawfik && !isPlana && !m.isGroup){
