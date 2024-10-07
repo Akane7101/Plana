@@ -1316,7 +1316,7 @@ Typed *surrender* to surrender and admited defeat`
         if (!isAdmins && !isCreator) return reply('🤏')
 	if (tagg && !isAbd) return reply (`شنو يااااا`) 
 	if (tagg && isAbd) {
-	 reply (`معقولة يا عبد الله داير تخليني خلاص 💔💔..و الفي بطني دا اوديهو وين طيب😭`)
+	 reply (`معقولة يا عبد الله داير تخليني خلااص 💔💔..و الفي بطني دا اوديهو وين طيب😭`)
 	let users = m.sender
 	await A17.groupParticipantsUpdate(m.chat, [users], 'remove')
 	} else if (braa) {
