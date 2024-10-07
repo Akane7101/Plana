@@ -2872,12 +2872,19 @@ console.log(result.transcript);
 		    
 
 	case 'view':{ 
-	var qq = await m.getQuotedMessage()
-	var vtype = Object.keys(qq.message)[0]
-	var mtype = Object.keys(qq.message[vtype].message)[0]
-	delete qq.message[vtype].message[mtype].viewOnce
-	A17.sendMessage(m.chat, { forward: qq }, { quoted: m })
-  }
+	let msg = m.message.viewOnceMessageV2.message
+	let type = Object.keys(msg)[0]
+	let media = await  A17.downloadAndSaveMediaMessage(quoted)
+	let buffer = Buffer.from([])
+	for await (const chunk of media) {
+        buffer = Buffer.concat([buffer, chunk])}
+	if (/video/.test(type)) {
+        return A17.sendMessage(m.chat, buffer, 'error.mp4', `${msg[type].caption}`, m)
+         } else if (/image/.test(type)) {
+        return A17.sendMessage(m.chat, buffer, 'error.jpg', `${msg[type].caption}`, m)
+        }
+	}
+		    break;
 
 
 	case 'string':{ 
