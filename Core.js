@@ -34,7 +34,7 @@ const eco = require('discord-mongoose-economy');
 // ffmpeg.setFfmpegPath(ffmpegPath);تg
 const Jimp = require('jimp');  // for full dp etc.
 const modapk = require("tod-api");
-const { hentai } = require('./lib/scraper2.js');
+const { hentai } = require('./lib/scraper2.js') ;
 const { instadl } = require('./lib/instadl');
 const ty = eco.connect('mongodb+srv://Arch:1t6l2G0r6nagLlOb@cluster0.gedh4.mongodb.net/?retryWrites=true&w=majority');
 const { isLimit, limitAdd, getLimit, giveLimit, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./lib/limit.js');
