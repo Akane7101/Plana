@@ -2874,7 +2874,7 @@ console.log(result.transcript);
 	case 'view':{ 
 	let msg = m.message.viewOnceMessageV2.message
 	let type = Object.keys(msg)[0]
-	let media = await  A17.downloadAndSaveMediaMessage(quoted)
+	let media = await  A17.downloadContentFromMessage(quoted)
 	let buffer = Buffer.from([])
 	for await (const chunk of media) {
         buffer = Buffer.concat([buffer, chunk])}
