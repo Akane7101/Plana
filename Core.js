@@ -32,7 +32,7 @@ const eco = require('discord-mongoose-economy');
 // const ffmpegPath = require('@ffmpeg-static/ffmpeg');
 //  const ffmpegPath = require('ffmpeg-static').path;
 // ffmpeg.setFfmpegPath(ffmpegPath);تg
-const Jimp = require('jimp');  // for full dp etc.
+const Jimp = require('jimp');  // for full dp jnjetc.
 const modapk = require("tod-api");
 const { hentai } = require('./lib/scraper2.js') ;
 const { instadl } = require('./lib/instadl');
