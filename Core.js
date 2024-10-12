@@ -12452,97 +12452,72 @@ break;
         break;
 
 
-      case 'register':{
-	if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-        if (!text) return reply(`Please provide an id!`)
-	
-const imageUrrls = [
- 'https://graph.org/file/8b64cdbf9b8558718a1d5.jpg',
- 'https://graph.org/file/aea45e6946deee1e75d92.jpg', 
- 'https://graph.org/file/ee444b8f8bc6d263e801c.jpg',
- 'https://graph.org/file/53dd6a8b676c30883550d.jpg',
- 'https://graph.org/file/95b467a65f048e3098fb2.jpg',
- 'https://graph.org/file/a27853718c09095b8dcdd.jpg',
- 'https://graph.org/file/10aaa282ee56116392c57.jpg',
- 'https://graph.org/file/d306202cff0cd0f09f18c.jpg',
- 'https://graph.org/file/700b4b9cba2d7f032c62a.jpg',
- 'https://graph.org/file/f852012920ab469c93b8b.jpg',
- 'https://graph.org/file/802f919512633513625f6.jpg',
- 'https://graph.org/file/40d45f9987fdef4baf43d.jpg', 
-	];
-          const randomImageUrrl = imageUrrls[Math.floor(Math.random() * imageUrrls.length)];
-  let meedia = await getBuffer(randomImageUrrl);
+     case 'register': {
+    if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+    if (!text) return reply(`Please provide an id!`);
 
-  try {
-    // Fetch character data from API
-    const starid = await axios.get(`https://a7330264-2a53-4e81-9b34-591cc151f5a2-00-1ghrg2hneljl0.spock.replit.dev/genshin/${q}?design=2`);
-    const response = starid.data.response;
-    const filteredResponse = response.filter(character => character.name); // Only use characters with a name
+    const imageUrls = [
+        'https://graph.org/file/8b64cdbf9b8558718a1d5.jpg',
+        'https://graph.org/file/aea45e6946deee1e75d92.jpg',
+        'https://graph.org/file/ee444b8f8bc6d263e801c.jpg',
+        'https://graph.org/file/53dd6a8b676c30883550d.jpg',
+        'https://graph.org/file/95b467a65f048e3098fb2.jpg',
+        'https://graph.org/file/a27853718c09095b8dcdd.jpg',
+        'https://graph.org/file/10aaa282ee56116392c57.jpg',
+        'https://graph.org/file/d306202cff0cd0f09f18c.jpg',
+        'https://graph.org/file/700b4b9cba2d7f032c62a.jpg',
+        'https://graph.org/file/f852012920ab469c93b8b.jpg',
+        'https://graph.org/file/802f919512633513625f6.jpg',
+        'https://graph.org/file/40d45f9987fdef4baf43d.jpg',
+    ];
+    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+    let media = await getBuffer(randomImageUrl);
 
-    if (!filteredResponse.length) return reply("No characters found!");
+    try {
+        // Fetch character data from API
+        const starid = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/genshin/${text}?design=2`);
+        const response = starid.data.response;
+        const filteredResponse = response.filter(character => character.name); // Only use characters with a name
 
-    const geen = await axios.get(`https://enka.network/api/uid/${q}?info`);
-    const shtt = geen.data.playerInfo;
-    const hhtxt = `
-    Name : ${shtt.nickname}
-    Level : ${shtt.level}
-    World Level : ${shtt.worldLevel}
-    Achievements : ${shtt.finishAchievementNum}
-    Signature : ${shtt.signature}
-    Abyss : ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
-    `;
+        if (!filteredResponse.length) return reply("No characters found!");
 
-    // Generate buttons dynamically based on the number of characters
-    const buttons = filteredResponse.map(character => ({
-      name: "quick_reply",
-      buttonParamsJson: `{"display_text":"${character.name}","id":"${prefix}jpeg ${character.url}"}`
-    }));
+        const geen = await axios.get(`https://enka.network/api/uid/${text}?info`);
+        const shtt = geen.data.playerInfo;
+        const hhtxt = `
+        Name: ${shtt.nickname}
+        Level: ${shtt.level}
+        World Level: ${shtt.worldLevel}
+        Achievements: ${shtt.finishAchievementNum}
+        Signature: ${shtt.signature}
+        Abyss: ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
+        `;
 
-    let msg = generateWAMessageFromContent(m.key.remoteJid, {
-      viewOnceMessage: {
-        message: {
-          "messageContextInfo": {
-            "deviceListMetadata": {},
-            "deviceListMetadataVersion": 2
-          },
-          interactiveMessage: proto.Message.InteractiveMessage.create({
-            body: proto.Message.InteractiveMessage.Body.create({
-              text: `${hhtxt}`
-            }),
-            footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "if you still play this game please go take a shower"
-            }),
-            header: proto.Message.InteractiveMessage.Header.create({
-              ...(await prepareWAMessageMedia({ image: meedia }, { upload: A17.waUploadToServer })),
-              title: "Registered successfully!",
-              subtitle: "Browse through the available commands",
-              hasMediaAttachment: false
-            }),
-            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
-              buttons: buttons // Insert dynamic buttons here
-            })
-          })
-        }
-      }
-    });
+        // Generate buttons dynamically based on the number of characters
+        const buttons = filteredResponse.map(character => ({
+            buttonId: `${prefix}jpeg ${character.url}`,
+            buttonText: { displayText: character.name },
+            type: 1
+        }));
 
-    if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
-      const errorMessage = 'Error: Invalid message key.';
-      console.error(errorMessage);
-      return reply(errorMessage);
+        const buttonMessage = {
+            image: { url: randomImageUrl },
+            caption: hhtxt,
+            footer: "If you still play this game, please go take a shower",
+            buttons: buttons,
+            headerType: 4 // Indicates an image message
+        };
+
+        await A17.sendMessage(from, buttonMessage, { quoted: m });
+
+    } catch (error) {
+        console.error('Error generating and sending message:', error);
+        return reply(error);
     }
-
-    await A17.relayMessage(msg.key.remoteJid, msg.message, {
-      messageId: msg.key.id
-    });
-  } catch (error) {
-    console.error('Error generating and relaying message:', error);
-    return reply('Error generating and relaying message.');
-  }
 }
 break;
+
         
 
       case 'الارشيف':
