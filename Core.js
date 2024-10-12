@@ -12452,72 +12452,120 @@ break;
         break;
 
 
-     case 'register': {
-    if (isBan) return reply(mess.banned);
-    if (isBanChat) return reply(mess.bangc);
-    A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
-    if (!text) return reply(`Please provide an id!`);
+      case 'register':{
+	if (isBan) return reply(mess.banned);
+        if (isBanChat) return reply(mess.bangc);
+        A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
+        if (!text) return reply(`Please provide an id!`)
+	const pfp = await axios.get (`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/starrail/profile/${q}`)
+	const jjl = pfp.data.response.url
+	const media = await getBuffer(jjl)
+	      
+	const imageUrls = [
+ 'https://graph.org/file/9bda3aa0978765724797e.jpg',
+ 'https://graph.org/file/330f2446be26870934669.jpg', 
+ 'https://graph.org/file/164b6ac5085370f3f2d43.jpg',
+ 'https://graph.org/file/b7a339394b46d32b837a1.jpg',
+ 'https://graph.org/file/7497b1956b0306e63454c.jpg',
+ 'https://graph.org/file/1d64649ad0fe9b717c9d1.jpg',
+ 'https://graph.org/file/e1038ea5ce44fa62c46dd.jpg',
+ 'https://graph.org/file/78ca23ebc45610b44e2bb.jpg',
+ 'https://graph.org/file/471dfce47fa4f0c1e1406.jpg',
+ 'https://graph.org/file/f43d9364b78ddc7a867aa.jpg',
+	];
+          const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
+        let media = await getBuffer(randomImageUrl);
+        
+        const starid = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/starrail/${q}?design=2`)
+        const fuck = starid.data.response;
+        const sure = fuck[0].name
+        if (sure) {
+	const ach = await axios.get(`https://api.mihomo.me/sr_info_parsed/${q}?lang=en`)
+	const dh = ach.data.player
+	const hh = dh.space_info
+	const stxt =`
+        Name : ${dh.nickname}
+	
+        signature : ${dh.signature} 
+	
+	uid : ${dh.uid}
+ 
+        Level : ${dh.level}
+	
+	world level : ${dh.world_level}
+ 
+	friends : ${dh.friend_count}
+ 
+        Memory of chaos level : ${hh.memory_data.chaos_level}
+	
+	memory of chaos stars : ${hh.memory_data.chaos_star_count}
+ 
+	simulated universe : ${hh.universe_level} 
 
-    const imageUrls = [
-        'https://graph.org/file/8b64cdbf9b8558718a1d5.jpg',
-        'https://graph.org/file/aea45e6946deee1e75d92.jpg',
-        'https://graph.org/file/ee444b8f8bc6d263e801c.jpg',
-        'https://graph.org/file/53dd6a8b676c30883550d.jpg',
-        'https://graph.org/file/95b467a65f048e3098fb2.jpg',
-        'https://graph.org/file/a27853718c09095b8dcdd.jpg',
-        'https://graph.org/file/10aaa282ee56116392c57.jpg',
-        'https://graph.org/file/d306202cff0cd0f09f18c.jpg',
-        'https://graph.org/file/700b4b9cba2d7f032c62a.jpg',
-        'https://graph.org/file/f852012920ab469c93b8b.jpg',
-        'https://graph.org/file/802f919512633513625f6.jpg',
-        'https://graph.org/file/40d45f9987fdef4baf43d.jpg',
-    ];
-    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-    let media = await getBuffer(randomImageUrl);
+        Lightcones : ${hh.light_cone_count}
 
-    try {
-        // Fetch character data from API
-        const starid = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/genshin/${text}?design=2`);
-        const response = starid.data.response;
-        const filteredResponse = response.filter(character => character.name); // Only use characters with a name
+        Relics : ${hh.relic_count} 
 
-        if (!filteredResponse.length) return reply("No characters found!");
+        Achievements  : ${hh.achievement_count}
 
-        const geen = await axios.get(`https://enka.network/api/uid/${text}?info`);
-        const shtt = geen.data.playerInfo;
-        const hhtxt = `
-        Name: ${shtt.nickname}
-        Level: ${shtt.level}
-        World Level: ${shtt.worldLevel}
-        Achievements: ${shtt.finishAchievementNum}
-        Signature: ${shtt.signature}
-        Abyss: ${shtt.towerFloorIndex} - ${shtt.towerLevelIndex}
-        `;
+        Books : ${hh.book_count} 
 
-        // Generate buttons dynamically based on the number of characters
-        const buttons = filteredResponse.map(character => ({
-            buttonId: `${prefix}jpeg ${character.url}`,
-            buttonText: { displayText: character.name },
-            type: 1
-        }));
+        Music : ${hh.music_count}
 
-        const buttonMessage = {
-            image: { url: randomImageUrl },
-            caption: hhtxt,
-            footer: "If you still play this game, please go take a shower",
-            buttons: buttons,
-            headerType: 4 // Indicates an image message
-        };
+        `
+       try {
+    // Generate dynamic buttons from the API response
+    let buttons = fuck.map((item, index) => ({
+        "name": "quick_reply",
+        "buttonParamsJson": `{"display_text":"${item.name}","id":"${prefix}jpeg ${item.url}"}`
+    }));
 
-        await A17.sendMessage(from, buttonMessage, { quoted: m });
+    // Prepare the WhatsApp message with the dynamically generated buttons
+    let msg = generateWAMessageFromContent(m.key.remoteJid, {
+        viewOnceMessage: {
+            message: {
+                "messageContextInfo": {
+                    "deviceListMetadata": {},
+                    "deviceListMetadataVersion": 2
+                },
+                interactiveMessage: proto.Message.InteractiveMessage.create({
+                    body: proto.Message.InteractiveMessage.Body.create({
+                        text: `${stxt}`
+                    }),
+                    footer: proto.Message.InteractiveMessage.Footer.create({
+                        text: "Choose below to get your character build"
+                    }),
+                    header: proto.Message.InteractiveMessage.Header.create({
+                        ...(await prepareWAMessageMedia({ image: media }, { upload: A17.waUploadToServer })),
+                        title: "Registered Successfully",
+                        subtitle: "Browse through the available commands",
+                        hasMediaAttachment: false
+                    }),
+                    nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({
+                        buttons: buttons
+                    })
+                })
+            }
+        }
+    }, {});
 
-    } catch (error) {
-        console.error('Error generating and sending message:', error);
-        return reply(error);
+    // Relay the message if it is valid
+    if (!msg || !msg.key || !msg.key.remoteJid || !msg.key.id) {
+        const errorMessage = 'Error: Invalid message key.';
+        console.error(errorMessage);
+        return reply(errorMessage);
     }
-}
-break;
 
+    await A17.relayMessage(msg.key.remoteJid, msg.message, {
+        messageId: msg.key.id
+    });
+} catch (error) {
+    console.error('Error generating and relaying message:', error);
+    reply(error);
+}
+	} 
+	     }
+        break;
         
 
       case 'الارشيف':
