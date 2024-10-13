@@ -12605,7 +12605,7 @@ break;
                         },
                         interactiveMessage: proto.Message.InteractiveMessage.create({
                             body: proto.Message.InteractiveMessage.Body.create({
-                                text: `${stxt}`
+                                text: `${hhtxt}`
                             }),
                             footer: proto.Message.InteractiveMessage.Footer.create({
                                 text: "Choose below to get your character build"
