@@ -12592,7 +12592,7 @@ break;
             // Generate dynamic buttons from the API response
             let buttons = fuck.map((item, index) => ({
                 "name": "quick_reply",
-                "buttonParamsJson": `{"display_text":"${item.name || 'Unknown Character'}","id":"${prefix}jpeg ${item.url}"}`
+                "buttonParamsJson": `{"display_text":"${item.name || item.id}","id":"${prefix}jpeg ${item.url}"}`
             }));
 
             // Prepare the WhatsApp message with the dynamically generated buttons
@@ -12641,6 +12641,7 @@ break;
     }
 }
 break;
+
 
 
         
