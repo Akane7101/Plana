@@ -2709,7 +2709,7 @@ console.log(result.transcript);
   let media = await A17.downloadAndSaveMediaMessage(quoted);
 
   // Define `urll` inside the `then` block
-  imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+  imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
     .then((response) => {
       console.log(response); 
       const urll = response.url;
