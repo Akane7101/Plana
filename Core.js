@@ -12457,11 +12457,11 @@ case 'register': {
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply(`Please provide an id!`);
-    const pfp = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/starrail/profile/${q}`);
+    const pfp = await axios.get(`https://6facb5b2-b36c-4ee8-b608-c8ce2fd26301-00-2hs9dzaz3o7wb.worf.replit.dev/starrail/profile/${q}`);
     const jjl = pfp.data.response.url;
     const media = await getBuffer(jjl);
 
-    const starid = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/starrail/${q}?design=1`);
+    const starid = await axios.get(`https://6facb5b2-b36c-4ee8-b608-c8ce2fd26301-00-2hs9dzaz3o7wb.worf.replit.dev/starrail/${q}?design=1`);
     const fuck = starid.data.response;
     const sure = fuck[0].name;
     if (sure) {
@@ -12573,7 +12573,7 @@ break;
     const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
     let media = await getBuffer(randomImageUrl);
 
-    const starid = await axios.get(`https://714eb0ba-3454-4787-9f8f-63c7f1d8ef8d-00-6uhb8plgpgy7.worf.replit.dev/genshin/${q}?design=2`);
+    const starid = await axios.get(`https://6facb5b2-b36c-4ee8-b608-c8ce2fd26301-00-2hs9dzaz3o7wb.worf.replit.dev/genshin/${q}?design=2`);
     const fuck = starid.data.response;
     const sure = fuck[0].name;
     if (sure) {
