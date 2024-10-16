@@ -12558,20 +12558,8 @@ break;
     if (isBanChat) return reply(mess.bangc);
     A17.sendMessage(from, { react: { text: "🍁", key: m.key } });
     if (!text) return reply(`Please provide an id!`);
-    const imageUrls = [
-        'https://graph.org/file/9bda3aa0978765724797e.jpg',
-        'https://graph.org/file/330f2446be26870934669.jpg',
-        'https://graph.org/file/164b6ac5085370f3f2d43.jpg',
-        'https://graph.org/file/b7a339394b46d32b837a1.jpg',
-        'https://graph.org/file/7497b1956b0306e63454c.jpg',
-        'https://graph.org/file/1d64649ad0fe9b717c9d1.jpg',
-        'https://graph.org/file/e1038ea5ce44fa62c46dd.jpg',
-        'https://graph.org/file/78ca23ebc45610b44e2bb.jpg',
-        'https://graph.org/file/471dfce47fa4f0c1e1406.jpg',
-        'https://graph.org/file/f43d9364b78ddc7a867aa.jpg',
-    ];
-    const randomImageUrl = imageUrls[Math.floor(Math.random() * imageUrls.length)];
-    let media = await getBuffer(randomImageUrl);
+     const gg = await axios.get(`https://akane710-planahsr.hf.space/genshin/profile/${q}`)
+     let media = await getBuffer(gg.data.response.url);
 
     const starid = await axios.get(`https://akane710-planahsr.hf.space/genshin/${q}?design=2`);
     const fuck = starid.data.response;
