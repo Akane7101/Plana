@@ -9096,13 +9096,13 @@ case 'card-القيرلفريند': {
      const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
-            let hanabi = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1306&character_art_url=${util.format(anu)}`);
+            let hanabi = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1310&character_art_url=${util.format(anu)}`);
 	     await sleep(5000)
-            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1306_${q}.png`);
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
             A17.sendMessage(from, { react: { text: "😋", key: m.key } });
-            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1306_${q}.png`);
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
             await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
     } catch (error) {
