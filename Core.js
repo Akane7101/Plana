@@ -8943,7 +8943,7 @@ break;
         if (isBanChat) return reply(mess.bangc);
 	if (!isTawfik && !isCreator) return reply(`المحتوى لو سمحت `)
         A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDiosV2&query=prinz_eugen_(azur_lane)`)
+        buffer = await getBuffer(`https://api.lolhuman.xyz/api/danbooru?apikey=GataDiosV3&query=prinz_eugen_(azur_lane)`)
         A17.sendMessage(from, { image: buffer, caption: ':q 💦 '}, { quoted: m })
         break;
 
@@ -8956,10 +8956,11 @@ break;
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let galagher = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1212&character_art_url=${util.format(anu)}`);
+	      await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1212_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -8983,10 +8984,11 @@ break;
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let galagher = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1303&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1303_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9009,7 +9011,7 @@ break;
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let galagher = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1208&character_art_url=${util.format(anu)}`);
@@ -9036,10 +9038,11 @@ break;
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let galagher = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1305&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1305_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9065,10 +9068,11 @@ case 'card-قلقات':{
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let galagher = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1301&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1301_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9124,10 +9128,11 @@ case 'card-cumdumbster':{
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let hanabi = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1306&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1306_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9151,10 +9156,11 @@ case 'card-seele': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let seele = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1102&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1102_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9178,10 +9184,11 @@ case 'card-blade': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let blade = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1205&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1205_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9205,10 +9212,11 @@ case 'card-silver': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let silver = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1006&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1006_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9232,10 +9240,11 @@ case 'card-kafka': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let kafka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1005&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1005_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9259,10 +9268,11 @@ case 'card-blackswan': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let blackswam = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1307&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1307_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9286,10 +9296,11 @@ case 'card-robin': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let robin = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1309&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1309_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9313,10 +9324,11 @@ case 'card-topaz': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let topaz = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1112&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1112_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9339,10 +9351,11 @@ case 'card-topaz': {
     try {
         if (/image/.test(mime)) {
           const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let bailu = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1211&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1211_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9365,10 +9378,11 @@ case 'card-clara': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let clara = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1107&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1107_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9391,10 +9405,11 @@ case 'card-himeko': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let himeko = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1003&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1003_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9419,10 +9434,11 @@ case 'card-yunli': {
     try {
         if (/image/.test(mime)) {
           const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let yunli = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1221&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1221_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9446,10 +9462,11 @@ case 'card-welt': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let welt = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1004&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1004_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9473,10 +9490,11 @@ case 'card-gepard': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let gepard = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1004&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1004_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9500,10 +9518,11 @@ case 'card-bronya': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let bronya = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1101&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1101_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9528,10 +9547,11 @@ case 'card-bronya': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let loucha = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1203&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1203_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9554,10 +9574,11 @@ case 'card-jingyuan': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let jingyuan = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1204&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1204_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9580,10 +9601,11 @@ case 'card-lunae': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let lunae = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1213&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1213_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9606,10 +9628,11 @@ case 'card-huohuo': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let huohuo = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1217&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1217_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9632,10 +9655,11 @@ case 'card-argenti': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let argenti = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1302&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1302_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9659,10 +9683,11 @@ case 'card-argenti': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let march = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1001&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1001_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9673,9 +9698,12 @@ case 'card-argenti': {
     } catch(error) {
 	try {
          if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
          let jingliu = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1224&character_art_url=${util.format(anu)}`) 
+		  await sleep(5000)
           buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1224_${q}.png`)
         await A17.sendMessage(from, { image: buffer }, { quoted: m })
          } else {
@@ -9699,10 +9727,11 @@ case 'card-dan': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let dan = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1002&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1002_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9725,10 +9754,11 @@ case 'card-asta': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let asta = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1009&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1009_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9751,10 +9781,11 @@ case 'card-herta': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let herta = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1013&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1013_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9777,10 +9808,11 @@ case 'card-serval': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let serval = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1103&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1103_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9803,10 +9835,11 @@ case 'card-natasha': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let natasha = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1105&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1105_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9829,10 +9862,11 @@ case 'card-pela': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let pela = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1106&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1106_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9855,10 +9889,11 @@ case 'card-sampo': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let sampo = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1108&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1108_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9881,10 +9916,11 @@ case 'card-hook': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let hook = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1109&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1109_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9907,10 +9943,11 @@ case 'card-lynx': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let lynx = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1110&character_art_url=${util.format(anu)}`);
+		 await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1110_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9933,10 +9970,11 @@ case 'card-luka': {
     try {
         if (/image/.test(mime)) {
            const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1111&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
             let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1111_${q}.png`);
             await A17.sendMessage(from, { image: buffer }, { quoted: m });
         } else {
@@ -9956,360 +9994,510 @@ case 'card-luka': {
 
         case 'card-qq':{
          if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1201": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1201_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1201_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1201&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1201_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1201_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-tingyun':{
-         if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1202": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1202_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1202_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+            if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1202&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1202_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1202_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-sushang':{
-         if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1206": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1206_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1206_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1206&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1206_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1206_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 		    
 
         case 'card-yukong':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1207": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1207_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1207_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+            if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1207&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1207_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1207_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-yanqing':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1209": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1209_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1209_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+            if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1209&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1209_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1209_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
 	case 'card-jade':{
-      if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1314": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1314_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1314_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+          if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1314&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1314_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1314_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-guinafen':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1210": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1210_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1210_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+          if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1210&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1210_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1210_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-xueyi':{
-      if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1214": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1214_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1214_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+         if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1214&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1214_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1214_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
         case 'card-hanya':{
-       if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1215": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1215_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1215_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+           if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1215&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1215_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1215_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
         case 'card-misha':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1312": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1312_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1312_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+            if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1312&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1312_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1312_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
         case 'card-acheron':{
-         if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1308": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1308_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1308_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1308&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1308_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1308_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
 
 
         case 'card-aventurine':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1304": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1304_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1304_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+           if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1304&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1304_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1304_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 	case 'card-boothil':{
-        if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"1315": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/1315_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/1315_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+            if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1315&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1315_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1315_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
 	case 'card-stelle':
 	case 'card-trailblazer':{
-         if (isBan) return reply(mess.banned);
-        if (isBanChat) return reply(mess.bangc);
-        let { GraphOrg } = require("./lib/uploader");
-        if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-jingliu 701607417`)
-	try {
-         if (/image/.test(mime)) {
-           let media = await A17.downloadAndSaveMediaMessage(quoted)
-          let anu = await GraphOrg(media);
-         let jingliu = await axios.get(`https://starraillcard.up.railway.app/get_profile?uid=${q}&image={"8006": "${util.format(anu)}"}`) 
-          buffer = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
-        await A17.sendMessage(from, { image: buffer }, { quoted: m })
-         } else {
-          A17.sendMessage(from, { react: { text: "😋", key: m.key } })
-           sx = await getBuffer(`https://starraillcard.up.railway.app/card/8006_${q}.png`)
-          await A17.sendMessage(from, { image: sx }, { quoted: m })
-	 }
-	 } catch(error) {
-	const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`) 
-         A17.sendMessage(from, { image: jj, caption : `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again`}, { quoted: m })
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=8006&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/8006_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/8006_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
         }
-	}
-           break;
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
+
+	case 'card-jiaoqiu':
+	case 'card-كلجة':{
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1218&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1218_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1218_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
+        }
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
+
+	case 'card-moze': {
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1228&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1228_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1228_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
+        }
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
+
+	case 'card-feixiao': {
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1220&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1220_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1220_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
+        }
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
+
+	case 'card-moze': {
+             if (isBan) return reply(mess.banned);
+    if (isBanChat) return reply(mess.bangc);
+    if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
+    try {
+        if (/image/.test(mime)) {
+           const imgbbUploader = require("imgbb-uploader");
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url
+            let luka = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1222&character_art_url=${util.format(anu)}`);
+	     await sleep(5000)
+            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1222_${q}.png`);
+            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+        } else {
+            A17.sendMessage(from, { react: { text: "😋", key: m.key } });
+            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1222_${q}.png`);
+            await A17.sendMessage(from, { image: sx }, { quoted: m });
+        }
+    } catch (error) {
+        const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
+        A17.sendMessage(from, { image: jj, caption: `Error retrieving your card..Make sure you already registered your profile by typing ${prefix}register (your id)..And if you're already registered.. Make sure you already have the character on your profile.. Like me here..then register and try again` }, { quoted: m });
+    }
+    break;
+}
+
 
 
 
