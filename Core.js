@@ -9093,7 +9093,7 @@ case 'card-القيرلفريند': {
     try {
         if (/image/.test(mime)) {
             const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
+     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
             let anu = response.url
             let hanabi = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1306&character_art_url=${util.format(anu)}`);
