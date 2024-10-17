@@ -442,7 +442,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
         const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=x0AAeTUk_oDZNdhHYBIr04pIwlbFmEBRzITYr763PDA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
@@ -456,7 +456,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=x0AAeTUk_oDZNdhHYBIr04pIwlbFmEBRzITYr763PDA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
@@ -513,7 +513,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=0OWo4K_Hh7qRWxNSkWQk0vEZavS9VDppbDNbkMmsnHk&token=1bee43f257d163058fdac76cf253b5a0eafdb5c8&text=![picture](${response.url})`)
@@ -527,7 +527,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
@@ -576,7 +576,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=LOzDPDFTKcsBv1GWL3aevKcEYrUEWJPc8rsEoyFS8YM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
@@ -590,7 +590,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=LOzDPDFTKcsBv1GWL3aevKcEYrUEWJPc8rsEoyFS8YM&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
@@ -629,7 +629,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
@@ -645,7 +645,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
@@ -760,7 +760,7 @@ console.log(result.transcript);
     const api = typ[Math.floor(Math.random() * typ.length)];
      const imgbbUploader = require("imgbb-uploader");
      const media = await A17.downloadAndSaveMediaMessage(m); // Access image from m.message
-    const response = await imgbbUploader("d5c5715bd26a25090da6c2ab87d5ed3a", media);
+    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
     const kk = await axios.get(`https://api.neoxr.eu/api/img2prompt?image=${urll}&apikey=mcandy`)
@@ -1306,7 +1306,7 @@ Typed *surrender* to surrender and admited defeat`
 }
 
 
-    if (smallinput.includes('hamster') || smallinput.includes('هامستر')) {
+    if (smallinput.includes('hamster') || smallinput.includes('هامستر') | smallinput.includes('t.me')) {
 	  
     A17.sendMessage(from, { sticker : { url :`https://i.ibb.co/V9GchFT/9d6171d5c0b5.webp`}}, { quoted: m });
 	    } 
@@ -2657,7 +2657,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2674,7 +2674,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2728,7 +2728,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2746,7 +2746,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
 	const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2841,7 +2841,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -2899,7 +2899,7 @@ console.log(result.transcript);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
           const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/image/.test(mime)) return `*Send/reply Image With Caption* ${prefix + command}`
@@ -5387,7 +5387,7 @@ break;
         reply(mess.wait)
         const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
 	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
 	const sensei = serika.data.data.url
@@ -5439,7 +5439,7 @@ break;
         reply(mess.wait)
         const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
 	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
 	const sensei = serika.data.data.url
@@ -6781,7 +6781,7 @@ break;
         const atnm = swn.split("/")[1];
          if (m.quoted.isAnimated === true) {
 	let media = await A17.downloadAndSaveMediaMessage(quoted);
-        const response = await imgbbUploader("62c163bf2e29c9bd3d12d41431ddfc6d", media)
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
 	const serika = await axios.get(`https://api.neoxr.eu/api/webp2mp4?url=${urll}&apikey=mcandy`)
 	const sensei = serika.data.data.url
