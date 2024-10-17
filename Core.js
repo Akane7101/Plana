@@ -9085,24 +9085,32 @@ case 'card-قلقات':{
 
 // Firefly (ID: 1310)
 case 'card-firefly':
-case 'card-القيرلفريند':{
+case 'card-القيرلفريند': {
     if (isBan) return reply(mess.banned);
     if (isBanChat) return reply(mess.bangc);
     let { GraphOrg } = require("./lib/uploader");
     if (!text) return reply(`Please provide a search term!\n\n*Example:* ${prefix}card-firefly 701607417`);
     try {
         if (/image/.test(mime)) {
-           const imgbbUploader = require("imgbb-uploader");
-     const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
-    const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
-            let anu = response.url
+            const imgbbUploader = require("imgbb-uploader");
+            const media = await A17.downloadAndSaveMediaMessage(quoted); // Access image from m.message
+            const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
+            let anu = response.url;
             let firefly = await axios.get(`https://akane710-planahsr.hf.space/starrail/${q}?design=1&character_id=1310&character_art_url=${anu}`);
-            let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
-            await A17.sendMessage(from, { image: buffer }, { quoted: m });
+
+            // Wait for 5 seconds before sending the image
+            setTimeout(async () => {
+                let buffer = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
+                await A17.sendMessage(from, { image: buffer }, { quoted: m });
+            }, 5000); // 5000 milliseconds = 5 seconds
         } else {
             A17.sendMessage(from, { react: { text: "😋", key: m.key } });
-            let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
-            await A17.sendMessage(from, { image: sx }, { quoted: m });
+
+            // Wait for 5 seconds before sending the image
+            setTimeout(async () => {
+                let sx = await getBuffer(`https://res.cloudinary.com/dob6buqxd/image/upload/card_images/1310_${q}.png`);
+                await A17.sendMessage(from, { image: sx }, { quoted: m });
+            }, 5000); // 5000 milliseconds = 5 seconds
         }
     } catch (error) {
         const jj = await getBuffer(`https://graph.org/file/8adb6b956cf2bf8025de4.jpg`);
@@ -9110,6 +9118,7 @@ case 'card-القيرلفريند':{
     }
     break;
 }
+
 
 // Hanabi (ID: 1306)
 case 'card-hanabi':
