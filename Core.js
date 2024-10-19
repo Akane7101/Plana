@@ -431,7 +431,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
       if (!isCmd && m.mtype != 'imageMessage' && m.mtype != 'stickerMessage' && m.mtype != 'audioMessage' && !islucas && !isTawfik && !isAdam && !isCreator && !isAli && !isAwad && !isEgo && !isDabi && !isKaze && !isJoan && !isHkl && !isKh && !isAbu && !isTmone && !isPlana && !isSae  && !isPs && !isHamada && !isMm && !m.isGroup){
          const typ = ['plana', 'arona', 'adamxion'];
         const api = typ[Math.floor(Math.random() * typ.length)];
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=x0AAeTUk_oDZNdhHYBIr04pIwlbFmEBRzITYr763PDA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=Djt9FJEUV2r9277XiDZu8evjgJs6SnSqzT6EcNfzbLg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(budy)}`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
         }
@@ -445,7 +445,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
-        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=x0AAeTUk_oDZNdhHYBIr04pIwlbFmEBRzITYr763PDA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
+        const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=Djt9FJEUV2r9277XiDZu8evjgJs6SnSqzT6EcNfzbLg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
 	}
@@ -459,7 +459,7 @@ module.exports = A17 = async (A17, m, chatUpdate, store) => {
     const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media);
     console.log(response)
     const urll = response.url;
-    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=x0AAeTUk_oDZNdhHYBIr04pIwlbFmEBRzITYr763PDA&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
+    const botreply = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=Djt9FJEUV2r9277XiDZu8evjgJs6SnSqzT6EcNfzbLg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=![picture](${response.url})`)
         menggoda = `${botreply.data.result.text}`
         m.reply(menggoda)
      }
@@ -4275,7 +4275,7 @@ break;
 	}
 	if (!text.includes("/")) {
         try {  
-          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=bJaDVxly4XH8rNlbDIxGSgqdbzLbzrEYBDBWPb8favg&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
+          const hoshino = await axios.get(`https://skizo.tech/api/cai/chat?apikey=${api}&characterId=smtV3Vyez6ODkwS8BErmBAdgGNj-1XWU73wIFVOY1hQ&sessionId=Tc4B_0zWVgX7YWl1G3bd-t8-mTRdropu3mHPWCqZi_I&token=529e24b4173b29dbc3054fef02a380e1e5b41949&text=${encodeURIComponent(q)}`);
           const yume = hoshino.data;
           let message = "";
 
@@ -12846,7 +12846,7 @@ break;
             });
         } catch (error) {
             console.error('Error generating and relaying message:', error);
-            reply(error);
+            reply('Error generating and relaying message:', error);
         }
     }
 }
