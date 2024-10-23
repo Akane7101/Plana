@@ -22,7 +22,7 @@ const kaitime = moment.tz('Asia/Kolkata').format('HH:mm:ss');
 const kaidate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY');
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss');
 const currentDate = new Date();
-const options = { weekday: 'long' }; // Specify 'long' to get the fukdll sday name
+const options = { weekday: 'long' }; // Specify 'long' to get the fukdll sday nakmkme
 const currentDay = new Intl.DateTimeFormat('en-US', options).format(currentDate);
 
 const speed = require('performance-now');
