@@ -2858,15 +2858,15 @@ console.log(result.transcript);
 
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
-          let { GraphOrg } = require("./lib/uploader");
-
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
         if (!/video/.test(mime)) return `*Send/reply video With Caption* ${prefix + command}`
-        let media = await A17.downloadAndSaveMediaMessage(quoted)
-        let anu = await GraphOrg(media);
-        let serika = await axios.get(`https://api.alyachan.dev/api/compressvid?video=${util.format(anu)}&apikey=QnYS8I`) 
-        const shiroko = serika.data.data
-        await A17.sendMessage(m.chat, { video: { url: shiroko.url_file} }, { quoted: m })
+        const imgbbUploader = require("imgbb-uploader");
+         let media = await A17.downloadAndSaveMediaMessage(quoted);
+        const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
+        const urll = response.url;
+        let serika = await axios.get(`https://akane710-imagecompress.hf.space/compress_image?image_url=${urll}`) 
+        const shiroko = serika.data.compressed_image_url
+        await A17.sendMessage(m.chat, { video: { url: shiroko } }, { quoted: m })
       }
         break; 
 		    
