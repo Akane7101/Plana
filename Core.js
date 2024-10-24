@@ -2859,14 +2859,13 @@ console.log(result.transcript);
         if (isBanChat) return reply(mess.bangc);
          A17.sendMessage(from, { react: { text: "🫡", key: m.key } })
         if (!quoted) return `*Send/reply Image With Caption* ${prefix + command}`
-        if (!/video/.test(mime)) return `*Send/reply video With Caption* ${prefix + command}`
-        const imgbbUploader = require("imgbb-uploader");
+         const imgbbUploader = require("imgbb-uploader");
          let media = await A17.downloadAndSaveMediaMessage(quoted);
         const response = await imgbbUploader("18cdb474f48a9c8ae35d369fe78e9869", media)
         const urll = response.url;
         let serika = await axios.get(`https://akane710-imagecompress.hf.space/compress_image?image_url=${urll}`) 
-        const shiroko = serika.data.compressed_image_url
-        await A17.sendMessage(m.chat, { image : { url: shiroko } }, { quoted: m })
+        const shiroko = serika.data
+        await A17.sendMessage(m.chat, { image : { url: shiroko.compressed_image_url } }, { quoted: m })
       }
         break; 
 		    
