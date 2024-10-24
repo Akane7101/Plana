@@ -2866,7 +2866,7 @@ console.log(result.transcript);
         const urll = response.url;
         let serika = await axios.get(`https://akane710-imagecompress.hf.space/compress_image?image_url=${urll}`) 
         const shiroko = serika.data.compressed_image_url
-        await A17.sendMessage(m.chat, { video: { url: shiroko } }, { quoted: m })
+        await A17.sendMessage(m.chat, { image : { url: shiroko } }, { quoted: m })
       }
         break; 
 		    
